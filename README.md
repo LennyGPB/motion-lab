@@ -102,3 +102,12 @@ Compositions `NovaVertical` (1080x1920) et `NovaWide` (1920x1080) — même comp
   - `NovaPhone` : téléphone à écran remplaçable (`screens={[{ from, node }]}`, transition auto) ;
   - `FeatureScene` : scène fonctionnalité répétable (liste `FEATURES` dans `Nova.tsx`, visuel optionnel).
 - Écrans de l'app : `remotion/nova/screens.tsx` (`HomeScreen`, `CardsScreen`).
+
+### Pub « Atlas » (app de voyage, 9:16 + 16:9)
+
+Compositions `AtlasVertical` (1080x1920) et `AtlasWide` (1920x1080), 24 s, ambiance cinématique en lumière chaude (ciel qui passe de l'aube au crépuscule, bandes cinéma, halos, poussière, reflet d'objectif, grain).
+
+- `npm run render:atlas` — rend `out/atlas-9x16.mp4` et `out/atlas-16x9.mp4`.
+- `npm run sfx:atlas` — régénère musique et effets (`public/atlas/sfx/`).
+- Briques (`remotion/atlas/parts.tsx`) : `FlightMap` (arc d'avion entre deux villes sur un monde en points), `DestCard` (carte destination répétable : ville, pays, prix, température, paysage illustré `lisbon` / `marrakech` / `kyoto`), `BookingScreen` (faux écran de réservation), `Ticket` (carte d'embarquement), `Wordmark`.
+- Destinations : liste `DESTS` dans `remotion/atlas/Atlas.tsx`. Le téléphone réutilise `NovaPhone` (écran remplaçable).

@@ -12,6 +12,8 @@ import { Stride } from "./stride/Stride";
 import { DURATION_FRAMES as STRIDE_FRAMES } from "./stride/timing";
 import { Nova } from "./nova/Nova";
 import { DURATION_FRAMES as NOVA_FRAMES } from "./nova/timing";
+import { Atlas } from "./atlas/Atlas";
+import { DURATION_FRAMES as ATLAS_FRAMES } from "./atlas/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -38,6 +40,8 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="Stride" component={Stride} durationInFrames={STRIDE_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="NovaVertical" component={Nova} durationInFrames={NOVA_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="NovaWide" component={Nova} durationInFrames={NOVA_FRAMES} fps={30} width={1920} height={1080} />
+    <Composition id="AtlasVertical" component={Atlas} durationInFrames={ATLAS_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="AtlasWide" component={Atlas} durationInFrames={ATLAS_FRAMES} fps={30} width={1920} height={1080} />
     </>
   );
 };
