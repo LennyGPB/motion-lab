@@ -49,6 +49,18 @@ const P: Record<string, React.ReactNode> = {
       <path d="M3 12l9 4.5 9-4.5M3 16.5L12 21l9-4.5" />
     </>
   ),
+  laptop: (
+    <>
+      <rect x="4" y="4.5" width="16" height="11" rx="1.5" />
+      <path d="M2 19h20M8 19l1-3.5h6l1 3.5" />
+    </>
+  ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </>
+  ),
   day: (
     <>
       <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />

@@ -14,6 +14,8 @@ import { Nova } from "./nova/Nova";
 import { DURATION_FRAMES as NOVA_FRAMES } from "./nova/timing";
 import { Atlas } from "./atlas/Atlas";
 import { DURATION_FRAMES as ATLAS_FRAMES } from "./atlas/timing";
+import { Ritual } from "./signspath2/Ritual";
+import { DURATION_FRAMES as RITUAL_FRAMES } from "./signspath2/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -42,6 +44,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="NovaWide" component={Nova} durationInFrames={NOVA_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="AtlasVertical" component={Atlas} durationInFrames={ATLAS_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="AtlasWide" component={Atlas} durationInFrames={ATLAS_FRAMES} fps={30} width={1920} height={1080} />
+    <Composition id="SignsPathRitual" component={Ritual} durationInFrames={RITUAL_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };

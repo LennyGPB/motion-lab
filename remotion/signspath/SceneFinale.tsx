@@ -25,17 +25,31 @@ const PTS = Array.from({ length: N }, (_, i) => {
   };
 });
 
-const URL_PARTS = [
-  { txt: "signs", from: W.signs, to: W.path },
-  { txt: "path", from: W.path, to: W.dot },
-  { txt: ".com", from: W.dot, to: W.comEnd },
-];
+/** Timing de la finale (temps voix) — paramétrable pour réutiliser la scène. */
+export type FinaleTiming = {
+  manifest: number; with: number; method: number; not: number; by: number; chance: number;
+  full: number; signs: number; path: number; dot: number; comEnd: number;
+  /** début du passage au CTA (temps voix) */
+  cta: number;
+  /** frame vidéo de début de la séquence */
+  from: number;
+};
+const DEFAULT_TIMING: FinaleTiming = {
+  manifest: W.manifest, with: W.with, method: W.method, not: W.not, by: W.by, chance: W.chance,
+  full: W.full, signs: W.signs, path: W.path, dot: W.dot, comEnd: W.comEnd, cta: 24.15, from: SCENES.finale.from,
+};
 
 /** Scènes 5 & 6 : sphère de particules qui s'ordonne ("with method") puis CTA signspath.com. */
-export const SceneFinale: React.FC = () => {
-  const f = useCurrentFrame() + SCENES.finale.from;
-  const flash = interpolate(f, [T(21.4), T(21.4) + 1, T(21.8)], [0, 0.85, 0], clamp);
-  const cta = prog(f, T(24.15), T(24.15) + 26, eInOut);
+export const SceneFinale: React.FC<{ timing?: FinaleTiming }> = ({ timing = DEFAULT_TIMING }) => {
+  const W = timing;
+  const URL_PARTS = [
+    { txt: "signs", from: W.signs, to: W.path },
+    { txt: "path", from: W.path, to: W.dot },
+    { txt: ".com", from: W.dot, to: W.comEnd },
+  ];
+  const f = useCurrentFrame() + W.from;
+  const flash = interpolate(f, [T(W.manifest - 0.16), T(W.manifest - 0.16) + 1, T(W.manifest + 0.24)], [0, 0.85, 0], clamp);
+  const cta = prog(f, T(W.cta), T(W.cta) + 26, eInOut);
 
   // texte tapé de l'URL
   let typed = "";
@@ -52,7 +66,7 @@ export const SceneFinale: React.FC = () => {
     <AbsoluteFill>
       <Canvas
         draw={(ctx, fr) => {
-          const fa = fr + SCENES.finale.from;
+          const fa = fr + W.from;
           const form = (d: number) => prog(fa, T(W.manifest) + d * 30, T(W.method) + 6 + d * 30, eInOut);
           const pulse = Math.exp(-Math.max(0, fa - T(W.chance)) / 8) * (fa >= T(W.chance) ? 1 : 0);
           const radius = lerp(360, 150, cta) * (1 + 0.06 * pulse);
@@ -79,7 +93,7 @@ export const SceneFinale: React.FC = () => {
             const x = lerp(ox, tx, k);
             const y = lerp(oy, ty, k);
             const depth = (z2 + 1) / 2;
-            const a = lerp(0.35, 0.25 + 0.7 * depth, k) * prog(fa, SCENES.finale.from, SCENES.finale.from + 12);
+            const a = lerp(0.35, 0.25 + 0.7 * depth, k) * prog(fa, W.from, W.from + 12);
             ctx.fillStyle = `hsla(${262 + depth * 18},85%,${70 + depth * 18}%,${a})`;
             ctx.beginPath();
             ctx.arc(x, y, p.r * lerp(1, 0.6 + depth * 0.7, k) * lerp(1, 0.75, cta), 0, Math.PI * 2);
@@ -99,7 +113,7 @@ export const SceneFinale: React.FC = () => {
         top={850}
         size={110}
         lineGap={0}
-        exitAt={T(24.1)}
+        exitAt={T(W.cta - 0.05)}
         lines={[
           [{ t: "Manifest", at: W.manifest, kind: "bold" }],
           [

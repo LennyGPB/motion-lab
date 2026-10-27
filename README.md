@@ -111,3 +111,11 @@ Compositions `AtlasVertical` (1080x1920) et `AtlasWide` (1920x1080), 24 s, ambia
 - `npm run sfx:atlas` — régénère musique et effets (`public/atlas/sfx/`).
 - Briques (`remotion/atlas/parts.tsx`) : `FlightMap` (arc d'avion entre deux villes sur un monde en points), `DestCard` (carte destination répétable : ville, pays, prix, température, paysage illustré `lisbon` / `marrakech` / `kyoto`), `BookingScreen` (faux écran de réservation), `Ticket` (carte d'embarquement), `Wordmark`.
 - Destinations : liste `DESTS` dans `remotion/atlas/Atlas.tsx`. Le téléphone réutilise `NovaPhone` (écran remplaçable).
+
+### Motion « SignsPath — Ritual » (2e vidéo SignsPath)
+
+Composition `SignsPathRitual` (1080x1920, 30 fps, 21,5 s), sources dans `remotion/signspath2/` (réutilise fond, typo, cartes et finale de `remotion/signspath/`).
+
+- `npm run render:signspath-ritual` — rend `out/signspath-ritual.mp4`.
+- Voix : `public/signspath/voice2.mp3` (normalisée), timing mot à mot (PocketSphinx) dans `remotion/signspath2/timing.ts`.
+- `SceneFinale` (sphère + CTA signspath.com) accepte maintenant un `timing` pour être réutilisée ; sans paramètre, le rendu de la 1re vidéo est inchangé.
