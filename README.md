@@ -42,3 +42,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 Sources dans `remotion/`. Si le téléchargement du Chrome Headless de Remotion est bloqué, pointer vers un Chromium local :
 `REMOTION_BROWSER_EXECUTABLE=/chemin/vers/chrome npm run render`.
+
+### Motion « SignsPath — One at a time »
+
+Composition `SignsPath` (1080x1920, 30 fps, 29 s), sources dans `remotion/signspath/`.
+
+- `npm run render:signspath` — rend `out/signspath.mp4` (vidéo + audio).
+- `npm run sfx:signspath` — régénère les effets sonores synthétisés (`public/signspath/sfx/`).
+- Le timing des mots est dans `remotion/signspath/timing.ts` (alignement forcé de la voix avec PocketSphinx).
+- `public/signspath/voice.mp3` est la voix fournie, normalisée à -16 LUFS.
+- Polices : Manrope + Instrument Serif (Google Fonts, embarquées dans `public/signspath/fonts/`).

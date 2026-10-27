@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "remotion:studio": "remotion studio remotion/index.ts",
-    "render": "remotion render remotion/index.ts Intro out/intro.mp4 --codec=h264"
+    "render": "remotion render remotion/index.ts Intro out/intro.mp4 --codec=h264",
+    "render:signspath": "remotion render remotion/index.ts SignsPath out/signspath.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:signspath": "python3 scripts/generate_sfx.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

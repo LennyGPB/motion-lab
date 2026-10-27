@@ -17,6 +17,7 @@
 /.next/
 /out/*
 !/out/intro.mp4
+!/out/signspath.mp4
 
 # production
 /build
