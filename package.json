@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "remotion:studio": "remotion studio remotion/index.ts",
+    "render": "remotion render remotion/index.ts Intro out/intro.mp4 --codec=h264"
   },
   "dependencies": {
+    "@remotion/cli": "4.0.539",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "remotion": "4.0.539"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
