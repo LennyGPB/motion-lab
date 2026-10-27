@@ -17,7 +17,9 @@
     "render:viewz-partenaires": "remotion render remotion/index.ts ViewZPartenaires out/viewz-partenaires.mp4 --codec=h264 --audio-codec=aac",
     "sfx:viewz-b2b": "python3 scripts/generate_sfx_viewz_b2b.py",
     "render:stride": "remotion render remotion/index.ts Stride out/stride.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:stride": "python3 scripts/generate_sfx_stride.py"
+    "sfx:stride": "python3 scripts/generate_sfx_stride.py",
+    "render:nova": "remotion render remotion/index.ts NovaVertical out/nova-9x16.mp4 --codec=h264 --audio-codec=aac && remotion render remotion/index.ts NovaWide out/nova-16x9.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:nova": "python3 scripts/generate_sfx_nova.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

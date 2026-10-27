@@ -88,3 +88,17 @@ Composition `Stride` (1080x1920, 30 fps, 17,5 s), sources dans `remotion/stride/
 - `npm run sfx:stride` — régénère musique et effets (`public/stride/sfx/`).
 - Scène stat réutilisable : `StatScene` dans `remotion/stride/parts.tsx` (valeur, format, unité, libellé, inversion des couleurs).
 - Faux écrans de l'app : `remotion/stride/screens.tsx` (`RunScreen`, `SummaryScreen`).
+
+### Pub « Nova » (néobanque premium, 9:16 + 16:9)
+
+Compositions `NovaVertical` (1080x1920) et `NovaWide` (1920x1080) — même composant, mise en page adaptative (`remotion/nova/layout.ts`). 22 s : partie lente jusqu'au drop (9 s), partie rythmée, fin posée.
+
+- `npm run render:nova` — rend `out/nova-9x16.mp4` et `out/nova-16x9.mp4`.
+- `npm run sfx:nova` — régénère musique et effets (`public/nova/sfx/`).
+- Briques réutilisables (`remotion/nova/parts.tsx`) :
+  - `NovaCard` : carte bancaire 3D (recto/verso, épaisseur, reflet holographique) ;
+  - `NotifStack` : notifications de paiement qui tombent et s'empilent (données dans `NOTIFS`) ;
+  - `GrowthChart` : courbe qui se dessine ;
+  - `NovaPhone` : téléphone à écran remplaçable (`screens={[{ from, node }]}`, transition auto) ;
+  - `FeatureScene` : scène fonctionnalité répétable (liste `FEATURES` dans `Nova.tsx`, visuel optionnel).
+- Écrans de l'app : `remotion/nova/screens.tsx` (`HomeScreen`, `CardsScreen`).

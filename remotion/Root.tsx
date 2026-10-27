@@ -10,6 +10,8 @@ import { B2B } from "./viewz-b2b/B2B";
 import { DURATION_FRAMES as B2B_FRAMES } from "./viewz-b2b/timing";
 import { Stride } from "./stride/Stride";
 import { DURATION_FRAMES as STRIDE_FRAMES } from "./stride/timing";
+import { Nova } from "./nova/Nova";
+import { DURATION_FRAMES as NOVA_FRAMES } from "./nova/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -34,6 +36,8 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="ViewZCasting" component={Casting} durationInFrames={CASTING_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ViewZPartenaires" component={B2B} durationInFrames={B2B_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="Stride" component={Stride} durationInFrames={STRIDE_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="NovaVertical" component={Nova} durationInFrames={NOVA_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="NovaWide" component={Nova} durationInFrames={NOVA_FRAMES} fps={30} width={1920} height={1080} />
     </>
   );
 };
