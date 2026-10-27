@@ -62,3 +62,11 @@ Composition `ViewZ` (1080x1920, 30 fps, 17,5 s), sources dans `remotion/viewz/`.
 - Captures de l'app : `public/viewz/screens/`, avatars : `public/viewz/avatars/`.
 - Logo `public/viewz/logo.png` reconstruit depuis une capture d'écran : à remplacer par le logo vectoriel/HD si disponible.
 - Timing des mots : `remotion/viewz/timing.ts`.
+
+### Motion « ViewZ — Casting danseur·se »
+
+Composition `ViewZCasting` (1080x1920, 30 fps, 22,3 s), sources dans `remotion/viewz-casting/` (réutilise les briques de `remotion/viewz/`).
+
+- `npm run render:viewz-casting` — rend `out/viewz-casting.mp4`.
+- Voix : `public/viewz/voice_casting.mp3` ; prod : `public/viewz/sfx/music_casting.wav` (générée par `npm run sfx:viewz`).
+- Timing des mots : `remotion/viewz-casting/timing.ts`.

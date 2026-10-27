@@ -65,11 +65,9 @@ def add(buf, x, at, gain=1.0):
     buf[i:j] += x[: j - i] * gain
 
 
-def music():
-    buf = np.zeros(int(DUR * SR))
-    start = 1.25 + VO  # "On a créé l'app" : la prod démarre
-    brk0, brk1 = 10.25 + VO, 11.2 + VO  # break autour du logo
-    end = 16.3
+def music(dur=DUR, start=1.25 + VO, brk0=10.25 + VO, brk1=11.2 + VO, end=16.3):
+    """start : démarrage de la prod ; [brk0, brk1[ : break ; end : arrêt des drums (s vidéo)."""
+    buf = np.zeros(int(dur * SR))
     # intro : nappe sombre + charley filtré
     tt = t(start)
     drone = sum(np.sin(2 * np.pi * f * tt) for f in (43.65, 87.3, 130.8)) * 0.15
@@ -192,4 +190,6 @@ if __name__ == "__main__":
     g.save("drop", drop_hit())
     g.save("tape_stop", tape_stop())
     g.save("shimmer", g.shimmer(2.0))
+    # prod du motion "casting" (cf. remotion/viewz-casting/timing.ts)
+    g.save("music_casting", music(dur=22.3, start=0.32, brk0=9.25 + VO, brk1=9.73 + VO, end=21.0))
     print("ok")

@@ -4,7 +4,7 @@ import { T } from "./timing";
 import { clamp, eExpo, eIn, eOut, hash } from "./util";
 
 export type Look = "white" | "hot" | "outline" | "muted";
-export type Tok = { t: string; at: number; look?: Look };
+export type Tok = { t: string; at: number; look?: Look; keepCase?: boolean };
 export type Line = { tokens: Tok[]; size: number; anim?: "slam" | "rise"; stretch?: number; gap?: number };
 
 const lookStyle = (look: Look): React.CSSProperties => {
@@ -76,7 +76,7 @@ export const KText: React.FC<Props> = ({ f, lines, top, exitAt, align = "center"
               fontWeight: 900,
               fontStretch: `${line.stretch ?? 82}%`,
               fontSize: line.size,
-              textTransform: "uppercase",
+              textTransform: tok.keepCase ? "none" : "uppercase",
               letterSpacing: line.size * -0.02,
               whiteSpace: "pre",
               paddingRight: line.size * 0.06,
