@@ -10,7 +10,9 @@
     "remotion:studio": "remotion studio remotion/index.ts",
     "render": "remotion render remotion/index.ts Intro out/intro.mp4 --codec=h264",
     "render:signspath": "remotion render remotion/index.ts SignsPath out/signspath.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:signspath": "python3 scripts/generate_sfx.py"
+    "sfx:signspath": "python3 scripts/generate_sfx.py",
+    "render:viewz": "remotion render remotion/index.ts ViewZ out/viewz.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:viewz": "python3 scripts/generate_sfx_viewz.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

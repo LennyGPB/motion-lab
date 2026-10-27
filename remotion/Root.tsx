@@ -2,6 +2,8 @@ import { Composition } from "remotion";
 import { Intro } from "./Intro";
 import { SignsPath } from "./signspath/SignsPath";
 import { DURATION_FRAMES, FPS } from "./signspath/timing";
+import { ViewZ } from "./viewz/ViewZ";
+import { DURATION_FRAMES as VZ_FRAMES } from "./viewz/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -22,6 +24,7 @@ export const RemotionRoot: React.FC = () => {
       width={1080}
       height={1920}
     />
+    <Composition id="ViewZ" component={ViewZ} durationInFrames={VZ_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };

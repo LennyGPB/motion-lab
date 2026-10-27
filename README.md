@@ -52,3 +52,13 @@ Composition `SignsPath` (1080x1920, 30 fps, 29 s), sources dans `remotion/signsp
 - Le timing des mots est dans `remotion/signspath/timing.ts` (alignement forcé de la voix avec PocketSphinx).
 - `public/signspath/voice.mp3` est la voix fournie, normalisée à -16 LUFS.
 - Polices : Manrope + Instrument Serif (Google Fonts, embarquées dans `public/signspath/fonts/`).
+
+### Motion « ViewZ — La connexion entre danseurs »
+
+Composition `ViewZ` (1080x1920, 30 fps, 17,5 s), sources dans `remotion/viewz/`.
+
+- `npm run render:viewz` — rend `out/viewz.mp4`.
+- `npm run sfx:viewz` — régénère la prod hip-hop et les effets (`public/viewz/sfx/`).
+- Captures de l'app : `public/viewz/screens/`, avatars : `public/viewz/avatars/`.
+- Logo `public/viewz/logo.png` reconstruit depuis une capture d'écran : à remplacer par le logo vectoriel/HD si disponible.
+- Timing des mots : `remotion/viewz/timing.ts`.
