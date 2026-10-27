@@ -70,3 +70,12 @@ Composition `ViewZCasting` (1080x1920, 30 fps, 22,3 s), sources dans `remotion/v
 - `npm run render:viewz-casting` — rend `out/viewz-casting.mp4`.
 - Voix : `public/viewz/voice_casting.mp3` ; prod : `public/viewz/sfx/music_casting.wav` (générée par `npm run sfx:viewz`).
 - Timing des mots : `remotion/viewz-casting/timing.ts`.
+
+### Motion « ViewZ — Partenariats organisateurs » (version pro / B2B)
+
+Composition `ViewZPartenaires` (1080x1920, 30 fps, 32 s), sources dans `remotion/viewz-b2b/` (réutilise le fond thermique et les polices de `remotion/viewz/`).
+
+- `npm run render:viewz-partenaires` — rend `out/viewz-partenaires.mp4`.
+- `npm run sfx:viewz-b2b` — régénère la musique et les sons `b2b_*` (`public/viewz/sfx/`).
+- Voix : `public/viewz/voice_b2b.mp3` ; timing : `remotion/viewz-b2b/timing.ts`.
+- Les chiffres et le nom d'événement du tableau de bord (« Open Battle », 148/200) sont illustratifs (marqués « Aperçu »).

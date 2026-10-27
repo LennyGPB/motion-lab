@@ -6,6 +6,8 @@ import { ViewZ } from "./viewz/ViewZ";
 import { DURATION_FRAMES as VZ_FRAMES } from "./viewz/timing";
 import { Casting } from "./viewz-casting/Casting";
 import { DURATION_FRAMES as CASTING_FRAMES } from "./viewz-casting/timing";
+import { B2B } from "./viewz-b2b/B2B";
+import { DURATION_FRAMES as B2B_FRAMES } from "./viewz-b2b/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -28,6 +30,7 @@ export const RemotionRoot: React.FC = () => {
     />
     <Composition id="ViewZ" component={ViewZ} durationInFrames={VZ_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ViewZCasting" component={Casting} durationInFrames={CASTING_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="ViewZPartenaires" component={B2B} durationInFrames={B2B_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
