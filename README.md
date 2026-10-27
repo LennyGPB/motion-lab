@@ -79,3 +79,12 @@ Composition `ViewZPartenaires` (1080x1920, 30 fps, 32 s), sources dans `remotion
 - `npm run sfx:viewz-b2b` — régénère la musique et les sons `b2b_*` (`public/viewz/sfx/`).
 - Voix : `public/viewz/voice_b2b.mp3` ; timing : `remotion/viewz-b2b/timing.ts`.
 - Les chiffres et le nom d'événement du tableau de bord (« Open Battle », 148/200) sont illustratifs (marqués « Aperçu »).
+
+### Pub « Stride » (app de running, sans voix)
+
+Composition `Stride` (1080x1920, 30 fps, 17,5 s), sources dans `remotion/stride/`. Tout est calé sur une grille à 128 BPM (`remotion/stride/timing.ts`).
+
+- `npm run render:stride` — rend `out/stride.mp4`.
+- `npm run sfx:stride` — régénère musique et effets (`public/stride/sfx/`).
+- Scène stat réutilisable : `StatScene` dans `remotion/stride/parts.tsx` (valeur, format, unité, libellé, inversion des couleurs).
+- Faux écrans de l'app : `remotion/stride/screens.tsx` (`RunScreen`, `SummaryScreen`).

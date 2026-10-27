@@ -15,7 +15,9 @@
     "sfx:viewz": "python3 scripts/generate_sfx_viewz.py",
     "render:viewz-casting": "remotion render remotion/index.ts ViewZCasting out/viewz-casting.mp4 --codec=h264 --audio-codec=aac",
     "render:viewz-partenaires": "remotion render remotion/index.ts ViewZPartenaires out/viewz-partenaires.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:viewz-b2b": "python3 scripts/generate_sfx_viewz_b2b.py"
+    "sfx:viewz-b2b": "python3 scripts/generate_sfx_viewz_b2b.py",
+    "render:stride": "remotion render remotion/index.ts Stride out/stride.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:stride": "python3 scripts/generate_sfx_stride.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",
