@@ -36,7 +36,9 @@
     "render:terminal": "remotion render remotion/index.ts Terminal out/terminal.mp4 --codec=h264 --audio-codec=aac",
     "sfx:terminal": "python3 scripts/generate_sfx_terminal.py",
     "render:platforms": "remotion render remotion/index.ts Platforms out/platforms.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:platforms": "python3 scripts/generate_sfx_platforms.py"
+    "sfx:platforms": "python3 scripts/generate_sfx_platforms.py",
+    "render:browsertour": "remotion render remotion/index.ts BrowserTour out/browser-tour.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:browsertour": "python3 scripts/generate_sfx_browsertour.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

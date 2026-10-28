@@ -176,3 +176,12 @@ Composition `Platforms` (1080x1920, 20 s). Le laptop arrive en 3D et s'ouvre, l'
 - **Écrans remplaçables** (contenu jamais animé) : `screens.desktop` (16:10), `screens.tablet` (3:4), `screens.phone` (~9:19.5) dans `remotion/platforms/config.ts`, images à placer dans `public/`. `null` = écran générique.
 - Dans la même config : produit, glyphe, slogan, CTA, couleurs, titres de chaque phase, étiquettes des appareils, plateformes, stores.
 - `npm run render:platforms` — rend `out/platforms.mp4` ; `npm run sfx:platforms` — régénère le son.
+
+### Motion « Browser tour » (navigateur en perspective, vertical, anglais)
+
+Composition `BrowserTour` (1080x1920, 20 s). Les fenêtres de navigateur arrivent du fond en 3D → carrousel en perspective : chaque page passe au premier plan à son tour (les autres reculent, pivotent et se floutent), sa capture défile verticalement, avec son numéro, son titre et son sous-titre à côté, plus l'URL en bas → vue d'ensemble en cascade isométrique « EVERY PAGE. POLISHED. » → fin (logo, slogan, CTA).
+
+- **Captures remplaçables** : `pages[].image` dans `remotion/browsertour/config.ts`, images à placer dans `public/` (ex. `public/browsertour/home.png`). Mettez une capture **pleine page**, 900 px de large ou plus ; elle défile automatiquement de haut en bas et son contenu n'est jamais animé. `null` = page générique.
+- La liste `pages` est répétable (titre, sous-titre, chemin d'URL, image) : la durée et les sons s'adaptent au nombre de pages.
+- Dans la même config : marque, domaine, slogan, CTA, couleurs, textes d'intro et de vue d'ensemble.
+- `npm run render:browsertour` — rend `out/browser-tour.mp4` ; `npm run sfx:browsertour` — régénère le son.

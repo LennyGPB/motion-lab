@@ -30,6 +30,8 @@ import { TerminalAd } from "./terminal/TerminalAd";
 import { DURATION_FRAMES as TERMINAL_FRAMES } from "./terminal/timing";
 import { Platforms } from "./platforms/Platforms";
 import { DURATION_FRAMES as PLATFORMS_FRAMES } from "./platforms/timing";
+import { BrowserTour } from "./browsertour/BrowserTour";
+import { DURATION_FRAMES as BROWSERTOUR_FRAMES } from "./browsertour/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -67,6 +69,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="ProductDemo" component={Demo} durationInFrames={DEMO_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="Terminal" component={TerminalAd} durationInFrames={TERMINAL_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="Platforms" component={Platforms} durationInFrames={PLATFORMS_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="BrowserTour" component={BrowserTour} durationInFrames={BROWSERTOUR_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
