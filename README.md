@@ -128,3 +128,11 @@ Compositions `LaunchVertical` (1080x1920) et `LaunchWide` (1920x1080), 16 s à 1
 - Faux écrans : `remotion/launch/screens.tsx` (`MockScreen`), aux couleurs de la config.
 - `npm run render:launch` — rend `out/launch-9x16.mp4` et `out/launch-16x9.mp4`.
 - `npm run sfx:launch` — régénère musique et effets (`public/launch/sfx/`). La musique dure 16 s pour 3 fonctionnalités : si vous en ajoutez, ajustez `DUR` / `END` dans `scripts/generate_sfx_launch.py` (1 fonctionnalité = 3 temps = 1,5 s).
+
+### Template « Problème → Solution » (vertical)
+
+Composition `ProblemSolution` (1080x1920, 19 s) : partie problème en noir et blanc (texte qui tremble, notifications qui s'empilent, horloge qui s'emballe, son tendu) → un point de couleur → la couleur envahit l'écran (tache au bord organique) → révélation de l'app dans un téléphone → bénéfices (répétables, l'écran du téléphone change à chacun) → fin avec CTA et stores.
+
+- **Tout se personnalise dans `remotion/probsol/config.ts`** : nom, glyphe, slogan, couleurs, lignes du problème, notifications, phrase de bascule, bénéfices (icône `grid` / `target` / `bolt` / `check` / `heart`, titre, sous-titre, écran), CTA, stores.
+- Faux écrans : `remotion/probsol/screens.tsx` (`home`, `focus`, `done`) — ajoutez un type pour un nouvel écran.
+- `npm run render:probsol` — rend `out/probleme-solution.mp4` ; `npm run sfx:probsol` — régénère le son. La musique est calée sur 3 bénéfices (`END` = 15 s dans le script).
