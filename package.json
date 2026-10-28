@@ -22,7 +22,9 @@
     "sfx:nova": "python3 scripts/generate_sfx_nova.py",
     "render:atlas": "remotion render remotion/index.ts AtlasVertical out/atlas-9x16.mp4 --codec=h264 --audio-codec=aac && remotion render remotion/index.ts AtlasWide out/atlas-16x9.mp4 --codec=h264 --audio-codec=aac",
     "sfx:atlas": "python3 scripts/generate_sfx_atlas.py",
-    "render:signspath-ritual": "remotion render remotion/index.ts SignsPathRitual out/signspath-ritual.mp4 --codec=h264 --audio-codec=aac"
+    "render:signspath-ritual": "remotion render remotion/index.ts SignsPathRitual out/signspath-ritual.mp4 --codec=h264 --audio-codec=aac",
+    "render:launch": "remotion render remotion/index.ts LaunchVertical out/launch-9x16.mp4 --codec=h264 --audio-codec=aac && remotion render remotion/index.ts LaunchWide out/launch-16x9.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:launch": "python3 scripts/generate_sfx_launch.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

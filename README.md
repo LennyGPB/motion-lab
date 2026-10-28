@@ -119,3 +119,12 @@ Composition `SignsPathRitual` (1080x1920, 30 fps, 21,5 s), sources dans `remotio
 - `npm run render:signspath-ritual` — rend `out/signspath-ritual.mp4`.
 - Voix : `public/signspath/voice2.mp3` (normalisée), timing mot à mot (PocketSphinx) dans `remotion/signspath2/timing.ts`.
 - `SceneFinale` (sphère + CTA signspath.com) accepte maintenant un `timing` pour être réutilisée ; sans paramètre, le rendu de la 1re vidéo est inchangé.
+
+### Template « Lancement » (annonce d'app, 9:16 + 16:9)
+
+Compositions `LaunchVertical` (1080x1920) et `LaunchWide` (1920x1080), 16 s à 120 BPM : compte à rebours 3-2-1 sur le beat → logo avec flash → téléphones en rafale → les 3 téléphones ensemble → bandeau date de sortie → fin avec stores.
+
+- **Tout se personnalise dans `remotion/launch/config.ts`** : nom, glyphe de l'icône, slogan, couleurs, fonctionnalités (une entrée = un téléphone dans la rafale, avec son écran `feed` / `stats` / `chat`), phrase du plan à 3 téléphones, date de sortie, CTA, stores.
+- Faux écrans : `remotion/launch/screens.tsx` (`MockScreen`), aux couleurs de la config.
+- `npm run render:launch` — rend `out/launch-9x16.mp4` et `out/launch-16x9.mp4`.
+- `npm run sfx:launch` — régénère musique et effets (`public/launch/sfx/`). La musique dure 16 s pour 3 fonctionnalités : si vous en ajoutez, ajustez `DUR` / `END` dans `scripts/generate_sfx_launch.py` (1 fonctionnalité = 3 temps = 1,5 s).

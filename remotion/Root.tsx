@@ -16,6 +16,8 @@ import { Atlas } from "./atlas/Atlas";
 import { DURATION_FRAMES as ATLAS_FRAMES } from "./atlas/timing";
 import { Ritual } from "./signspath2/Ritual";
 import { DURATION_FRAMES as RITUAL_FRAMES } from "./signspath2/timing";
+import { Launch } from "./launch/Launch";
+import { DURATION_FRAMES as LAUNCH_FRAMES } from "./launch/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -45,6 +47,8 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="AtlasVertical" component={Atlas} durationInFrames={ATLAS_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="AtlasWide" component={Atlas} durationInFrames={ATLAS_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="SignsPathRitual" component={Ritual} durationInFrames={RITUAL_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="LaunchVertical" component={Launch} durationInFrames={LAUNCH_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="LaunchWide" component={Launch} durationInFrames={LAUNCH_FRAMES} fps={30} width={1920} height={1080} />
     </>
   );
 };
