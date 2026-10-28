@@ -136,3 +136,11 @@ Composition `ProblemSolution` (1080x1920, 19 s) : partie problème en noir et bl
 - **Tout se personnalise dans `remotion/probsol/config.ts`** : nom, glyphe, slogan, couleurs, lignes du problème, notifications, phrase de bascule, bénéfices (icône `grid` / `target` / `bolt` / `check` / `heart`, titre, sous-titre, écran), CTA, stores.
 - Faux écrans : `remotion/probsol/screens.tsx` (`home`, `focus`, `done`) — ajoutez un type pour un nouvel écran.
 - `npm run render:probsol` — rend `out/probleme-solution.mp4` ; `npm run sfx:probsol` — régénère le son. La musique est calée sur 3 bénéfices (`END` = 15 s dans le script).
+
+### Template « Social proof » (vertical, textes en anglais)
+
+Composition `SocialProof` (1080x1920, 18 s, 120 BPM) : accroche → chiffres clés en compteurs géants 3D (répétable) → avis clients en cartes empilées en 3D avec étoiles qui se remplissent (répétable) → mur d'avis qui défile → logo, note et stores.
+
+- **Tout se personnalise dans `remotion/proof/config.ts`** : nom, glyphe, slogan, couleurs, accroche, `stats` (valeur, décimales, préfixe/suffixe, libellé, étoiles), `reviews` (nombre d'étoiles, citation, prénom, mention), phrases du mur, badge de note, stores.
+- `npm run render:proof` — rend `out/social-proof.mp4` ; `npm run sfx:proof` — régénère le son (calé sur 3 chiffres + 3 avis, `END` = 14 s dans le script).
+- `StoreBtn` (badges stores) accepte maintenant `lang="en"`.

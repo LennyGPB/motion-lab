@@ -26,7 +26,9 @@
     "render:launch": "remotion render remotion/index.ts LaunchVertical out/launch-9x16.mp4 --codec=h264 --audio-codec=aac && remotion render remotion/index.ts LaunchWide out/launch-16x9.mp4 --codec=h264 --audio-codec=aac",
     "sfx:launch": "python3 scripts/generate_sfx_launch.py",
     "render:probsol": "remotion render remotion/index.ts ProblemSolution out/probleme-solution.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:probsol": "python3 scripts/generate_sfx_probsol.py"
+    "sfx:probsol": "python3 scripts/generate_sfx_probsol.py",
+    "render:proof": "remotion render remotion/index.ts SocialProof out/social-proof.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:proof": "python3 scripts/generate_sfx_proof.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

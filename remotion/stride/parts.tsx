@@ -229,7 +229,7 @@ export const Wordmark: React.FC<{ size: number; color?: string }> = ({ size, col
   </span>
 );
 
-export const StoreBtn: React.FC<{ kind: "apple" | "google" }> = ({ kind }) => (
+export const StoreBtn: React.FC<{ kind: "apple" | "google"; lang?: "fr" | "en" }> = ({ kind, lang = "fr" }) => (
   <div
     style={{
       width: 420,
@@ -248,8 +248,8 @@ export const StoreBtn: React.FC<{ kind: "apple" | "google" }> = ({ kind }) => (
   >
     {kind === "apple" ? <AppleLogo /> : <PlayLogo />}
     <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.05 }}>
-      <span style={{ fontSize: 22, fontWeight: 500 }}>{kind === "apple" ? "Télécharger dans" : "DISPONIBLE SUR"}</span>
-      <span style={{ fontSize: 46, fontWeight: 700, letterSpacing: -1 }}>{kind === "apple" ? "l'App Store" : "Google Play"}</span>
+      <span style={{ fontSize: 22, fontWeight: 500 }}>{kind === "apple" ? (lang === "en" ? "Download on the" : "Télécharger dans") : lang === "en" ? "GET IT ON" : "DISPONIBLE SUR"}</span>
+      <span style={{ fontSize: 46, fontWeight: 700, letterSpacing: -1 }}>{kind === "apple" ? (lang === "en" ? "App Store" : "l'App Store") : "Google Play"}</span>
     </div>
   </div>
 );
