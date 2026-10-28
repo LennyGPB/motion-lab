@@ -32,7 +32,9 @@
     "render:webbuild": "remotion render remotion/index.ts WebBuild out/web-build.mp4 --codec=h264 --audio-codec=aac",
     "sfx:webbuild": "python3 scripts/generate_sfx_webbuild.py",
     "render:demo": "remotion render remotion/index.ts ProductDemo out/product-demo.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:demo": "python3 scripts/generate_sfx_demo.py"
+    "sfx:demo": "python3 scripts/generate_sfx_demo.py",
+    "render:terminal": "remotion render remotion/index.ts Terminal out/terminal.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:terminal": "python3 scripts/generate_sfx_terminal.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

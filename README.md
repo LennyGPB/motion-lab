@@ -160,3 +160,11 @@ Composition `ProductDemo` (1080x1920, 16 s). Fausse démo filmée d'un tableau d
 - **Tout se personnalise dans `remotion/demo/config.ts`** : produit, slogan, CTA, URL, couleurs, fond d'écran, accroche et phrase de fin, et surtout `steps` (répétable) : pour chaque étape, les zooms (`at` + zone à cadrer), les clics (`at` + point), la bulle (`at`, point d'ancrage, titre, texte) et l'effet (`range`, `point`, `export` ou `none`).
 - Géométrie de l'app de démo : `remotion/demo/geometry.ts` ; écran : `remotion/demo/Dashboard.tsx`.
 - `npm run render:demo` — rend `out/product-demo.mp4` ; `npm run sfx:demo` — régénère le son.
+
+### Motion « The terminal » (outils dev / API / open source, vertical, anglais)
+
+Composition `Terminal` (1080x1920, 19 s). Boot CRT → terminal en 3D qui tape les commandes (installation avec barre de progression, init, dev) → « Ready on localhost » s'illumine → warp (hyperespace + flash) → la fenêtre résultat jaillit → vitrine 3D (orbite, reflet au sol, balayages de lumière, symboles de code qui flottent) → vue éclatée isométrique (terminal + app en couches) → fin (logo, commande d'installation, bouton GitHub, docs).
+
+- **Écran résultat remplaçable** : mettez votre capture dans `public/` (ex. `public/terminal/screen.png`, format 16:10 conseillé) et indiquez `screenImage: "terminal/screen.png"` dans `remotion/terminal/config.ts`. Le contenu de cette fenêtre n'est jamais animé : toutes les animations portent sur la fenêtre entière.
+- Dans la même config : produit, slogan, commande d'installation, GitHub, URL docs, couleurs, titre de la fenêtre, commandes + sorties du terminal (`spinner`, `progress`, `ok`, `info`, `accent`, `muted`), titres des 3 phases.
+- `npm run render:terminal` — rend `out/terminal.mp4` ; `npm run sfx:terminal` — régénère le son.
