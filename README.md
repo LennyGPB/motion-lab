@@ -152,3 +152,11 @@ Composition `WebBuild` (1080x1920, 17 s). En haut, une fenêtre de navigateur en
 - **Tout se personnalise dans `remotion/webbuild/config.ts`** : studio, URL, slogan, CTA, couleurs, contenu du site de démo (marque, liens, titre, sous-titre, boutons, fonctionnalités), titres des 3 phases.
 - Le code affiché est généré depuis ces textes (`remotion/webbuild/timing.ts`, liste `CODE`) ; le planning de frappe et d'apparition des blocs est calculé automatiquement.
 - `npm run render:webbuild` — rend `out/web-build.mp4` ; `npm run sfx:webbuild` — régénère le son.
+
+### Motion « Product demo with cursor » (mockup PC / SaaS, vertical, anglais)
+
+Composition `ProductDemo` (1080x1920, 16 s). Fausse démo filmée d'un tableau de bord SaaS dans une fenêtre d'app : le curseur se déplace en courbe et clique, la caméra zoome en douceur sur la zone importante à chaque étape (avec léger flou de mouvement), et une bulle d'explication pointe sur l'élément. Barre de progression des étapes en haut, carte de fin produit.
+
+- **Tout se personnalise dans `remotion/demo/config.ts`** : produit, slogan, CTA, URL, couleurs, fond d'écran, accroche et phrase de fin, et surtout `steps` (répétable) : pour chaque étape, les zooms (`at` + zone à cadrer), les clics (`at` + point), la bulle (`at`, point d'ancrage, titre, texte) et l'effet (`range`, `point`, `export` ou `none`).
+- Géométrie de l'app de démo : `remotion/demo/geometry.ts` ; écran : `remotion/demo/Dashboard.tsx`.
+- `npm run render:demo` — rend `out/product-demo.mp4` ; `npm run sfx:demo` — régénère le son.

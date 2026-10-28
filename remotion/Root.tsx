@@ -24,6 +24,8 @@ import { Proof } from "./proof/Proof";
 import { DURATION_FRAMES as PROOF_FRAMES } from "./proof/timing";
 import { WebBuild } from "./webbuild/WebBuild";
 import { DURATION_FRAMES as WEBBUILD_FRAMES } from "./webbuild/timing";
+import { Demo } from "./demo/Demo";
+import { DURATION_FRAMES as DEMO_FRAMES } from "./demo/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -58,6 +60,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="ProblemSolution" component={ProbSol} durationInFrames={PROBSOL_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="SocialProof" component={Proof} durationInFrames={PROOF_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="WebBuild" component={WebBuild} durationInFrames={WEBBUILD_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="ProductDemo" component={Demo} durationInFrames={DEMO_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
