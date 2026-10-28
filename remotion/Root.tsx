@@ -28,6 +28,8 @@ import { Demo } from "./demo/Demo";
 import { DURATION_FRAMES as DEMO_FRAMES } from "./demo/timing";
 import { TerminalAd } from "./terminal/TerminalAd";
 import { DURATION_FRAMES as TERMINAL_FRAMES } from "./terminal/timing";
+import { Platforms } from "./platforms/Platforms";
+import { DURATION_FRAMES as PLATFORMS_FRAMES } from "./platforms/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -64,6 +66,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="WebBuild" component={WebBuild} durationInFrames={WEBBUILD_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ProductDemo" component={Demo} durationInFrames={DEMO_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="Terminal" component={TerminalAd} durationInFrames={TERMINAL_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="Platforms" component={Platforms} durationInFrames={PLATFORMS_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };

@@ -168,3 +168,11 @@ Composition `Terminal` (1080x1920, 19 s). Boot CRT → terminal en 3D qui tape l
 - **Écran résultat remplaçable** : mettez votre capture dans `public/` (ex. `public/terminal/screen.png`, format 16:10 conseillé) et indiquez `screenImage: "terminal/screen.png"` dans `remotion/terminal/config.ts`. Le contenu de cette fenêtre n'est jamais animé : toutes les animations portent sur la fenêtre entière.
 - Dans la même config : produit, slogan, commande d'installation, GitHub, URL docs, couleurs, titre de la fenêtre, commandes + sorties du terminal (`spinner`, `progress`, `ok`, `info`, `accent`, `muted`), titres des 3 phases.
 - `npm run render:terminal` — rend `out/terminal.mp4` ; `npm run sfx:terminal` — régénère le son.
+
+### Motion « Works everywhere » (multi-plateformes, vertical, anglais)
+
+Composition `Platforms` (1080x1920, 20 s). Le laptop arrive en 3D et s'ouvre, l'écran s'allume → la tablette entre en se retournant (dos alu → écran) → le téléphone tombe avec un rebond → les trois se placent en famille, reliés par des arcs de synchronisation, « WORKS EVERYWHERE. » + badges des plateformes → emboîtement (le téléphone dans la tablette, la tablette dans l'écran du laptop) → fin (logo, slogan, CTA, stores).
+
+- **Écrans remplaçables** (contenu jamais animé) : `screens.desktop` (16:10), `screens.tablet` (3:4), `screens.phone` (~9:19.5) dans `remotion/platforms/config.ts`, images à placer dans `public/`. `null` = écran générique.
+- Dans la même config : produit, glyphe, slogan, CTA, couleurs, titres de chaque phase, étiquettes des appareils, plateformes, stores.
+- `npm run render:platforms` — rend `out/platforms.mp4` ; `npm run sfx:platforms` — régénère le son.

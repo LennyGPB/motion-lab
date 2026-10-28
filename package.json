@@ -34,7 +34,9 @@
     "render:demo": "remotion render remotion/index.ts ProductDemo out/product-demo.mp4 --codec=h264 --audio-codec=aac",
     "sfx:demo": "python3 scripts/generate_sfx_demo.py",
     "render:terminal": "remotion render remotion/index.ts Terminal out/terminal.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:terminal": "python3 scripts/generate_sfx_terminal.py"
+    "sfx:terminal": "python3 scripts/generate_sfx_terminal.py",
+    "render:platforms": "remotion render remotion/index.ts Platforms out/platforms.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:platforms": "python3 scripts/generate_sfx_platforms.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",
