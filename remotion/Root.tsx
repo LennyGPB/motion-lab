@@ -22,6 +22,8 @@ import { ProbSol } from "./probsol/ProbSol";
 import { DURATION_FRAMES as PROBSOL_FRAMES } from "./probsol/timing";
 import { Proof } from "./proof/Proof";
 import { DURATION_FRAMES as PROOF_FRAMES } from "./proof/timing";
+import { WebBuild } from "./webbuild/WebBuild";
+import { DURATION_FRAMES as WEBBUILD_FRAMES } from "./webbuild/timing";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -55,6 +57,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="LaunchWide" component={Launch} durationInFrames={LAUNCH_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="ProblemSolution" component={ProbSol} durationInFrames={PROBSOL_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="SocialProof" component={Proof} durationInFrames={PROOF_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="WebBuild" component={WebBuild} durationInFrames={WEBBUILD_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };

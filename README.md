@@ -144,3 +144,11 @@ Composition `SocialProof` (1080x1920, 18 s, 120 BPM) : accroche → chiffres cl�
 - **Tout se personnalise dans `remotion/proof/config.ts`** : nom, glyphe, slogan, couleurs, accroche, `stats` (valeur, décimales, préfixe/suffixe, libellé, étoiles), `reviews` (nombre d'étoiles, citation, prénom, mention), phrases du mur, badge de note, stores.
 - `npm run render:proof` — rend `out/social-proof.mp4` ; `npm run sfx:proof` — régénère le son (calé sur 3 chiffres + 3 avis, `END` = 14 s dans le script).
 - `StoreBtn` (badges stores) accepte maintenant `lang="en"`.
+
+### Motion « The site that builds itself » (mockup PC, vertical, anglais)
+
+Composition `WebBuild` (1080x1920, 17 s). En haut, une fenêtre de navigateur en 3D où la page se construit bloc par bloc (nav, titre, sous-titre, boutons, image, fonctionnalités, logos) avec un cadre de sélection façon devtools ; en bas, un éditeur de code qui tape le HTML en direct (chaque bloc apparaît quand sa ligne est finie). Le curseur clique ensuite sur « Get started » (succès + confettis), la caméra se recentre sur le site, puis carte de fin agence/studio.
+
+- **Tout se personnalise dans `remotion/webbuild/config.ts`** : studio, URL, slogan, CTA, couleurs, contenu du site de démo (marque, liens, titre, sous-titre, boutons, fonctionnalités), titres des 3 phases.
+- Le code affiché est généré depuis ces textes (`remotion/webbuild/timing.ts`, liste `CODE`) ; le planning de frappe et d'apparition des blocs est calculé automatiquement.
+- `npm run render:webbuild` — rend `out/web-build.mp4` ; `npm run sfx:webbuild` — régénère le son.
