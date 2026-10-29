@@ -295,3 +295,18 @@ Composition `KinetikFeatures` (1080x1920, 36,8 s), style Kinetik, musique plus d
 
 - Captures : `public/kinetik5/screens/` (+ l'éditeur de `public/kinetik4`). Effets : `public/kinetik3/sfx`.
 - `npm run render:kinetik-features` rend `out/kinetik-features.mp4` ; `npm run sfx:kinetik-features` régénère la musique.
+
+### Motion SignsPath #7 « Night affirmations » (vertical, anglais, voix avec écho)
+
+Composition `SignsPathNight` (1080x1920, 29,5 s), style SignsPath en version nuit : rythme lent, fondus longs, très peu d'effets (un carillon discret par affirmation), musique ambiante calme, voix avec écho.
+1. « Listen to this before you fall asleep. » : la lune se lève.
+2. « I let go of this day. I did what I could. » : le « jour » se défait en poussière qui s'envole.
+3. « My body rests, my mind settles. » : cercle de respiration (breathe in / out), l'onde se calme.
+4. « I am becoming the person I want to be. » : l'orbe grandit, un cercle se referme.
+5. « Every day, I keep my promises to myself a little more. » : 7 jours s'allument le long d'un fil qui monte.
+6. « What I repeat becomes my reality. » : ondes qui se répètent, « repeat » en écho devient « reality ».
+7. « I fall asleep in peace, and I wake up ready to move forward. » : la lune descend, l'aube se lève, une flèche avance.
+8. « Full guide at signspath.com » : l'URL se tape, « sleep well ».
+
+- Voix avec écho : `public/signspath/night/voice.wav` (ffmpeg `aecho`). Musique : `npm run sfx:signspath-night`.
+- `npm run render:signspath-night` rend `out/signspath-night.mp4`.
