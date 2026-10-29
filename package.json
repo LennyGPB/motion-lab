@@ -46,7 +46,9 @@
     "render:signspath-eyes": "remotion render remotion/index.ts SignsPathEyesClosed out/signspath-eyes-closed.mp4 --codec=h264 --audio-codec=aac",
     "render:signspath-oneyear": "remotion render remotion/index.ts SignsPathOneYear out/signspath-one-year.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-tuto": "remotion render remotion/index.ts KinetikTutorial out/kinetik-tutorial.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:kinetik-tuto": "python3 scripts/generate_sfx_kinetik3.py"
+    "sfx:kinetik-tuto": "python3 scripts/generate_sfx_kinetik3.py",
+    "render:kinetik-editor": "remotion render remotion/index.ts KinetikEditor out/kinetik-editor.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:kinetik-editor": "python3 scripts/generate_sfx_kinetik4.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

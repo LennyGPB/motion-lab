@@ -20,7 +20,7 @@ const HITS: [number, number][] = [
 ];
 
 /* ---------------- typo ---------------- */
-const heavy = (size: number, color = "#fff", stretch = 90): React.CSSProperties => ({
+export const heavy = (size: number, color = "#fff", stretch = 90): React.CSSProperties => ({
   fontFamily: FONT,
   fontStyle: "italic",
   fontWeight: 900,
@@ -32,7 +32,7 @@ const heavy = (size: number, color = "#fff", stretch = 90): React.CSSProperties 
   whiteSpace: "nowrap",
   letterSpacing: "-0.02em",
 });
-const sans = (size: number, color = "#fff"): React.CSSProperties => ({
+export const sans = (size: number, color = "#fff"): React.CSSProperties => ({
   fontFamily: SANS,
   fontWeight: 800,
   fontSize: size,
@@ -41,9 +41,9 @@ const sans = (size: number, color = "#fff"): React.CSSProperties => ({
   whiteSpace: "nowrap",
   letterSpacing: "-0.02em",
 });
-const caps = (size = 28, color = CYAN): React.CSSProperties => ({ fontFamily: SANS, fontWeight: 800, fontSize: size, letterSpacing: "0.35em", color, textTransform: "uppercase" });
+export const caps = (size = 28, color = CYAN): React.CSSProperties => ({ fontFamily: SANS, fontWeight: 800, fontSize: size, letterSpacing: "0.35em", color, textTransform: "uppercase" });
 
-const Pop: React.FC<{ f: number; at: number; style: React.CSSProperties; children: React.ReactNode; glow?: string }> = ({ f, at, style, children, glow }) => {
+export const Pop: React.FC<{ f: number; at: number; style: React.CSSProperties; children: React.ReactNode; glow?: string }> = ({ f, at, style, children, glow }) => {
   if (f < at) return <span style={{ ...style, display: "inline-block", opacity: 0 }}>{children}</span>;
   const q = prog(f, at, at + 7, eExpo);
   const ab = (1 - q) * 14;
@@ -63,24 +63,24 @@ const Pop: React.FC<{ f: number; at: number; style: React.CSSProperties; childre
   );
 };
 
-const exitStyle = (f: number, at: number, len = 4): React.CSSProperties => {
+export const exitStyle = (f: number, at: number, len = 4): React.CSSProperties => {
   const o = prog(f, at - len, at, eInOut);
   return { opacity: 1 - o, transform: `scale(${1 + o * 0.25}) translateX(${o * (hash(Math.floor(f)) - 0.5) * 60}px)`, filter: o > 0.02 ? `blur(${o * 14}px)` : undefined };
 };
 
-const Row: React.FC<{ top: number; gap?: number; children: React.ReactNode; style?: React.CSSProperties }> = ({ top, gap = 24, children, style }) => (
+export const Row: React.FC<{ top: number; gap?: number; children: React.ReactNode; style?: React.CSSProperties }> = ({ top, gap = 24, children, style }) => (
   <div style={{ position: "absolute", top, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "baseline", gap, ...style }}>{children}</div>
 );
 
 /* ---------------- écran 3D avec zoom + curseur ---------------- */
 type Spot = { x: number; y: number }; // coordonnées normalisées dans la capture
-const Cursor: React.FC<{ x: number; y: number; press: number }> = ({ x, y, press }) => (
+export const Cursor: React.FC<{ x: number; y: number; press: number }> = ({ x, y, press }) => (
   <svg width={70} height={70} viewBox="0 0 24 24" style={{ position: "absolute", left: x - 8, top: y - 6, transform: `scale(${1 - press * 0.18})`, transformOrigin: "8px 6px", filter: "drop-shadow(0 6px 10px rgba(0,0,0,0.6))" }}>
     <path d="M4 2 L4 19 L8.5 15 L11.5 21.5 L14.2 20.3 L11.3 14 L17 14 Z" fill="#fff" stroke="#111" strokeWidth={1.2} strokeLinejoin="round" />
   </svg>
 );
 
-const Screen: React.FC<{
+export const Screen: React.FC<{
   f: number;
   src: string;
   aspect: number;
@@ -90,9 +90,15 @@ const Screen: React.FC<{
   cursor?: { from: Spot; to: Spot; t: number; clickAt: number } | null;
   highlight?: { x: number; y: number; w: number; h: number; on: number; r?: number } | null;
   children?: React.ReactNode;
-}> = ({ f, src, aspect, w, zoom, origin, cursor, highlight, children }) => {
+  dir?: string;
+  /** true : le point `origin` est amené au centre du cadre (sans dépasser les bords de la capture). */
+  center?: boolean;
+}> = ({ f, src, aspect, w, zoom, origin, cursor, highlight, children, dir = "kinetik3", center = false }) => {
   const h = w / aspect;
-  const map = (p: Spot) => ({ x: origin.x * w + (p.x - origin.x) * w * zoom, y: origin.y * h + (p.y - origin.y) * h * zoom });
+  const clampN = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+  const tx = center ? clampN((0.5 - origin.x * zoom) * w, w - w * zoom, 0) : origin.x * w * (1 - zoom);
+  const ty = center ? clampN((0.5 - origin.y * zoom) * h, h - h * zoom, 0) : origin.y * h * (1 - zoom);
+  const map = (p: Spot) => ({ x: tx + p.x * w * zoom, y: ty + p.y * h * zoom });
   let cur: React.ReactNode = null;
   if (cursor) {
     const p = { x: lerp(cursor.from.x, cursor.to.x, cursor.t), y: lerp(cursor.from.y, cursor.to.y, cursor.t) };
@@ -108,8 +114,8 @@ const Screen: React.FC<{
   }
   return (
     <div style={{ position: "relative", width: w, height: h, borderRadius: 22, overflow: "hidden", border: "2px solid rgba(94,230,242,0.8)", boxShadow: "0 0 50px rgba(94,230,242,0.35), 0 40px 80px rgba(0,0,0,0.6)", background: "#08070b" }}>
-      <div style={{ position: "absolute", inset: 0, transform: `scale(${zoom})`, transformOrigin: `${origin.x * 100}% ${origin.y * 100}%` }}>
-        <Img src={staticFile(`kinetik3/screens/${src}.jpg`)} style={{ width: w, height: h, display: "block" }} />
+      <div style={{ position: "absolute", inset: 0, transform: `translate(${tx}px, ${ty}px) scale(${zoom})`, transformOrigin: "0 0" }}>
+        <Img src={staticFile(`${dir}/screens/${src}.jpg`)} style={{ width: w, height: h, display: "block" }} />
         {highlight && highlight.on > 0 ? (
           <div
             style={{
@@ -133,7 +139,7 @@ const Screen: React.FC<{
 };
 
 /** Conteneur 3D flottant : entrée depuis le fond, léger balancement, sortie floue. */
-const Float3D: React.FC<{ f: number; a: number; b: number; cy: number; w: number; h: number; ry?: number; children: React.ReactNode }> = ({ f, a, b, cy, w, h, ry = -12, children }) => {
+export const Float3D: React.FC<{ f: number; a: number; b: number; cy: number; w: number; h: number; ry?: number; children: React.ReactNode }> = ({ f, a, b, cy, w, h, ry = -12, children }) => {
   const inQ = prog(f, a, a + 14, eExpo);
   const out = prog(f, b - 4, b, eInOut);
   return (
@@ -266,7 +272,7 @@ const Hook2: React.FC<{ f: number }> = ({ f }) => {
   );
 };
 
-const KLogo: React.FC<{ f: number; at: number; size: number }> = ({ f, at, size }) => {
+export const KLogo: React.FC<{ f: number; at: number; size: number }> = ({ f, at, size }) => {
   const q = prog(f, at, at + 8, eExpo);
   const ab = (1 - q) * 18 + (f >= at ? 3 : 0);
   const ds = `drop-shadow(${-ab}px 0 0 rgba(255,40,90,0.6)) drop-shadow(${ab}px 0 0 rgba(40,240,255,0.6)) drop-shadow(0 0 28px rgba(170,140,255,0.75))`;
@@ -546,13 +552,13 @@ const Step5: React.FC<{ f: number }> = ({ f }) => {
 };
 
 /* ---------------- Kinetik synchronise tout ---------------- */
-const Phone: React.FC<{ w: number; children?: React.ReactNode; glow?: number }> = ({ w, children, glow = 0.5 }) => (
+export const Phone: React.FC<{ w: number; children?: React.ReactNode; glow?: number }> = ({ w, children, glow = 0.5 }) => (
   <div style={{ width: w, height: w * 1.95, borderRadius: w * 0.16, border: "6px solid #1d1b29", background: "#05040a", boxShadow: `0 0 0 2px rgba(196,181,255,0.5), 0 0 ${60 * glow}px rgba(139,92,246,${0.7 * glow}), 0 40px 80px rgba(0,0,0,0.6)`, position: "relative", overflow: "hidden" }}>
     {children}
     <div style={{ position: "absolute", top: 14, left: "50%", width: w * 0.3, height: 22, marginLeft: -w * 0.15, borderRadius: 11, background: "#000" }} />
   </div>
 );
-const MiniMotion: React.FC<{ f: number; w: number; t0: number }> = ({ f, w, t0 }) => {
+export const MiniMotion: React.FC<{ f: number; w: number; t0: number }> = ({ f, w, t0 }) => {
   const k = f - t0;
   const beat = Math.exp(-((Math.max(0, k)) % 14.5) / 4);
   return (

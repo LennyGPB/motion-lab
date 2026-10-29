@@ -266,3 +266,19 @@ Composition `KinetikTutorial` (1080x1920, 26,2 s), style Kinetik (grille néon, 
 
 - Captures : `public/kinetik3/screens/` (website, create, brand, colors, music). Les zones cliquées sont réglées dans `remotion/kinetik3/Kinetik3.tsx`.
 - `npm run render:kinetik-tuto` rend `out/kinetik-tutorial.mp4` ; `npm run sfx:kinetik-tuto` régénère la musique et les effets.
+
+### Motion « Kinetik — tuto partie 2 : l'éditeur » (vertical, anglais, voix)
+
+Composition `KinetikEditor` (1080x1920, 33,7 s), même style que la partie 1, avec les vraies captures de l'éditeur.
+1. « Your video's READY in 2 seconds… TWEAK IT? » puis « EASY. »
+2. « Kinetik has a SUPER SIMPLE EDITOR » : l'éditeur en 3D.
+3. Le chat Kinetik : « Make the title bigger » se tape dans le chat, envoi, réponse « Done ✓ ».
+4. « EVERY SCENE / EVERY ANIMATION / EVERY WORD » : zoom sur la timeline, la transition, puis le titre.
+5. « Switch TEMPLATES in ONE CLICK » : clic sur un modèle (Halo 3D).
+6. Voiceover, musique, traduction (zoom sur la barre du haut, titre traduit EN → FR → ES → DE → IT → PT).
+7. Transitions : la liste défile en surbrillance.
+8. Export : 9:16 TikTok, 1:1 Instagram, 16:9 YouTube ; « In MP4. In HD. Ready to post. » + clic sur « Start rendering ».
+9. Carte de fin Kinetik + kinetik-app.com.
+
+- Captures : `public/kinetik4/screens/` ; les effets sonores sont ceux de la partie 1 (`public/kinetik3/sfx`).
+- `npm run render:kinetik-editor` rend `out/kinetik-editor.mp4` ; `npm run sfx:kinetik-editor` régénère la musique.
