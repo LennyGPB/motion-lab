@@ -38,7 +38,9 @@
     "render:platforms": "remotion render remotion/index.ts Platforms out/platforms.mp4 --codec=h264 --audio-codec=aac",
     "sfx:platforms": "python3 scripts/generate_sfx_platforms.py",
     "render:browsertour": "remotion render remotion/index.ts BrowserTour out/browser-tour.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:browsertour": "python3 scripts/generate_sfx_browsertour.py"
+    "sfx:browsertour": "python3 scripts/generate_sfx_browsertour.py",
+    "render:kinetik2": "remotion render remotion/index.ts KinetikDay2 out/kinetik-day2.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:kinetik2": "python3 scripts/generate_sfx_kinetik2.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

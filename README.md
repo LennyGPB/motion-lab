@@ -185,3 +185,16 @@ Composition `BrowserTour` (1080x1920, 20 s). Les fenêtres de navigateur arriven
 - La liste `pages` est répétable (titre, sous-titre, chemin d'URL, image) : la durée et les sons s'adaptent au nombre de pages.
 - Dans la même config : marque, domaine, slogan, CTA, couleurs, textes d'intro et de vue d'ensemble.
 - `npm run render:browsertour` — rend `out/browser-tour.mp4` ; `npm run sfx:browsertour` — régénère le son.
+
+### Motion « Kinetik challenge — Day 2 » (vertical, anglais, voix)
+
+Composition `KinetikDay2` (1080x1920, 8 s), dans le style du Day 1 : sol en grille néon cyan, halo central, grain, glitchs et aberration chromatique. Sous-titres mot à mot calés sur la voix (alignement PocketSphinx, `remotion/kinetik2/timing.ts`). Déroulé :
+1. « KINETIK CHALLENGE », DAY 2 avec flash.
+2. « I'm creating a MOTION GRAPHIC » : un écran 3D sort de la grille en fil de fer.
+3. « for a fictional WEBSITE » : un scan génère le site fictif « Halo » (GENERATING 0 → 100 %).
+4. « with Kinetik » : logo violet.
+5. « in literally 5 SECONDS » : anneau chrono.
+6. Le site final en 3D avec des chevrons.
+
+- Voix : `public/kinetik2/voice.wav` (normalisée). Pour une autre voix, remplace le fichier et recale les temps dans `timing.ts`.
+- `npm run render:kinetik2` rend `out/kinetik-day2.mp4` ; `npm run sfx:kinetik2` régénère la musique et les effets.

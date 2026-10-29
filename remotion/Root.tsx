@@ -31,6 +31,8 @@ import { DURATION_FRAMES as TERMINAL_FRAMES } from "./terminal/timing";
 import { Platforms } from "./platforms/Platforms";
 import { DURATION_FRAMES as PLATFORMS_FRAMES } from "./platforms/timing";
 import { BrowserTour } from "./browsertour/BrowserTour";
+import { Kinetik2 } from "./kinetik2/Kinetik2";
+import { DURATION_FRAMES as KINETIK2_FRAMES } from "./kinetik2/timing";
 import { DURATION_FRAMES as BROWSERTOUR_FRAMES } from "./browsertour/timing";
 
 export const RemotionRoot: React.FC = () => {
@@ -70,6 +72,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="Terminal" component={TerminalAd} durationInFrames={TERMINAL_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="Platforms" component={Platforms} durationInFrames={PLATFORMS_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="BrowserTour" component={BrowserTour} durationInFrames={BROWSERTOUR_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikDay2" component={Kinetik2} durationInFrames={KINETIK2_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
