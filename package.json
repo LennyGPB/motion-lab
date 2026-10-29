@@ -43,7 +43,8 @@
     "sfx:kinetik2": "python3 scripts/generate_sfx_kinetik2.py",
     "render:signspath-21days": "remotion render remotion/index.ts SignsPath21Days out/signspath-21days.mp4 --codec=h264 --audio-codec=aac",
     "render:signspath-tuesday": "remotion render remotion/index.ts SignsPathTuesday out/signspath-tuesday.mp4 --codec=h264 --audio-codec=aac",
-    "render:signspath-eyes": "remotion render remotion/index.ts SignsPathEyesClosed out/signspath-eyes-closed.mp4 --codec=h264 --audio-codec=aac"
+    "render:signspath-eyes": "remotion render remotion/index.ts SignsPathEyesClosed out/signspath-eyes-closed.mp4 --codec=h264 --audio-codec=aac",
+    "render:signspath-oneyear": "remotion render remotion/index.ts SignsPathOneYear out/signspath-one-year.mp4 --codec=h264 --audio-codec=aac"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

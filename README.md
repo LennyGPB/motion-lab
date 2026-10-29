@@ -237,3 +237,16 @@ Composition `SignsPathEyesClosed` (1080x1920, 24 s), dans le style SignsPath.
 
 - Voix : `public/signspath/voice5.mp3` (normalisée). Timing : `remotion/signspath5/timing.ts`.
 - `npm run render:signspath-eyes` rend `out/signspath-eyes-closed.mp4`.
+
+### Motion SignsPath #6 « In a year » (vertical, anglais, voix)
+
+Composition `SignsPathOneYear` (1080x1920, 22,3 s), dans le style SignsPath.
+1. « In a year, you'll be glad you started today. » : frise de 12 mois de « today » à « in a year », le point la traverse, l'arrivée s'illumine (« glad you did »).
+2. « Your future self is watching. » : orbe « you · in a year » relié par un regard en pointillés à « you · today ».
+3. « They're not asking you to be perfect… to start. » : « perfect. » barré, 5 étoiles qui s'éteignent, puis un gros bouton « Start ▸ » pressé.
+4. « One intention. One technique. One specific day. » : trois cartes de verre qui se retournent une à une.
+5. « And that day is today. » : la carte « someday ? » se retourne en « Today · Day 1 ».
+6. Finale « Manifest with method » + signspath.com.
+
+- Voix : `public/signspath/voice6.mp3` (normalisée). Timing : `remotion/signspath6/timing.ts`.
+- `npm run render:signspath-oneyear` rend `out/signspath-one-year.mp4`.
