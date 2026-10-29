@@ -282,3 +282,16 @@ Composition `KinetikEditor` (1080x1920, 33,7 s), même style que la partie 1, av
 
 - Captures : `public/kinetik4/screens/` ; les effets sonores sont ceux de la partie 1 (`public/kinetik3/sfx`).
 - `npm run render:kinetik-editor` rend `out/kinetik-editor.mp4` ; `npm run sfx:kinetik-editor` régénère la musique.
+
+### Motion « What can Kinetik do? » (vertical, anglais, voix)
+
+Composition `KinetikFeatures` (1080x1920, 36,8 s), style Kinetik, musique plus dynamique (128 BPM, arpège, montée avant « New templates drop »). Utilise toutes les captures de la page Templates.
+1. « What can KINETIK do? » puis « your own VIDEO STUDIO » : carrousel 3D des 6 catégories.
+2. Community creations : clic sur un modèle, un scan l'adapte à la marque (couleurs changées), compte à rebours 3 s, « DONE. ».
+3. « Over 150+ MOTION TEMPLATES » : la page Motion défile, puis l'éditeur (« fully CUSTOMIZABLE »).
+4. Physical products, Signature (logo animé), Instagram posts (« NO MORE HEADACHES » barré), Store screenshots : chaque page défile en 3D.
+5. « New templates DROP EVERY DAY » : de vraies cartes de modèles tombent dans une grille ; la communauté (avatars) grandit.
+6. « FOLLOW » : bouton cliqué, logo, cartes de modèles.
+
+- Captures : `public/kinetik5/screens/` (+ l'éditeur de `public/kinetik4`). Effets : `public/kinetik3/sfx`.
+- `npm run render:kinetik-features` rend `out/kinetik-features.mp4` ; `npm run sfx:kinetik-features` régénère la musique.

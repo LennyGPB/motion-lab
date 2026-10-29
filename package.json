@@ -48,7 +48,9 @@
     "render:kinetik-tuto": "remotion render remotion/index.ts KinetikTutorial out/kinetik-tutorial.mp4 --codec=h264 --audio-codec=aac",
     "sfx:kinetik-tuto": "python3 scripts/generate_sfx_kinetik3.py",
     "render:kinetik-editor": "remotion render remotion/index.ts KinetikEditor out/kinetik-editor.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:kinetik-editor": "python3 scripts/generate_sfx_kinetik4.py"
+    "sfx:kinetik-editor": "python3 scripts/generate_sfx_kinetik4.py",
+    "render:kinetik-features": "remotion render remotion/index.ts KinetikFeatures out/kinetik-features.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:kinetik-features": "python3 scripts/generate_sfx_kinetik5.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",
