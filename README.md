@@ -211,3 +211,17 @@ Composition `SignsPath21Days` (1080x1920, 24,4 s), dans le style SignsPath.
 
 - Voix : `public/signspath/voice3.mp3` (normalisée). Timing : `remotion/signspath3/timing.ts`.
 - `npm run render:signspath-21days` rend `out/signspath-21days.mp4`.
+
+### Motion SignsPath #4 « An ordinary Tuesday » (vertical, anglais, voix)
+
+Composition `SignsPathTuesday` (1080x1920, 25,4 s), dans le style SignsPath.
+1. « Imagine an ordinary Tuesday… » : la semaine en cartes de verre, le mardi se soulève et s'illumine.
+2. « You wake up. Light fills the room. » : une fenêtre en arche, lever de soleil, rayons de lumière chaude.
+3. « You know exactly what you're doing with your day. » : le planning du mardi se coche ligne par ligne.
+4. « No stress. No doubt. » : un gribouillis emmêlé se dénoue en ligne calme, les « ? » s'évaporent.
+5. « Just your life, the way you chose it. » : orbe lumineux entouré d'un cercle qui se referme.
+6. « Write that day. In detail. In the present tense. » : un journal s'écrit mot à mot, les verbes au présent sont surlignés.
+7. Finale « Manifest with method » + signspath.com.
+
+- Voix : `public/signspath/voice4.mp3` (normalisée). Timing : `remotion/signspath4/timing.ts`.
+- `npm run render:signspath-tuesday` rend `out/signspath-tuesday.mp4`.

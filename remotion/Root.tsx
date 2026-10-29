@@ -33,6 +33,8 @@ import { DURATION_FRAMES as PLATFORMS_FRAMES } from "./platforms/timing";
 import { BrowserTour } from "./browsertour/BrowserTour";
 import { Kinetik2 } from "./kinetik2/Kinetik2";
 import { Days21 } from "./signspath3/Days21";
+import { Tuesday } from "./signspath4/Tuesday";
+import { DURATION_FRAMES as TUESDAY_FRAMES } from "./signspath4/timing";
 import { DURATION_FRAMES as DAYS21_FRAMES } from "./signspath3/timing";
 import { DURATION_FRAMES as KINETIK2_FRAMES } from "./kinetik2/timing";
 import { DURATION_FRAMES as BROWSERTOUR_FRAMES } from "./browsertour/timing";
@@ -76,6 +78,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="BrowserTour" component={BrowserTour} durationInFrames={BROWSERTOUR_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikDay2" component={Kinetik2} durationInFrames={KINETIK2_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
