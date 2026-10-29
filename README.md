@@ -198,3 +198,16 @@ Composition `KinetikDay2` (1080x1920, 8 s), dans le style du Day 1 : sol en gril
 
 - Voix : `public/kinetik2/voice.wav` (normalisée). Pour une autre voix, remplace le fichier et recale les temps dans `timing.ts`.
 - `npm run render:kinetik2` rend `out/kinetik-day2.mp4` ; `npm run sfx:kinetik2` régénère la musique et les effets.
+
+### Motion SignsPath #3 « 21 days » (vertical, anglais, voix)
+
+Composition `SignsPath21Days` (1080x1920, 24,4 s), dans le style SignsPath.
+1. « Do this for 21 days. No more, no less. » : un anneau de 21 jours s'allume avec un compteur, un 22e point se dissout, puis l'anneau se verrouille.
+2. « Not "when I have time." Not "until it works." » : une frise de jours sans fin se perd dans le flou, puis ∞ apparaît.
+3. « A clear duration is a goal you can reach. » : un chemin Day 1 → Day 21, l'arrivée est validée.
+4. « A vague one is a quiet way to quit. » : chemin en pointillés, brouillard, le point s'éteint.
+5. « Pick your intention. Mark your calendar. And start today. » : pastille intention, calendrier de 3 semaines entouré, « Day 1 · Today ».
+6. Finale « Manifest with method » + signspath.com (scène commune).
+
+- Voix : `public/signspath/voice3.mp3` (normalisée). Timing : `remotion/signspath3/timing.ts`.
+- `npm run render:signspath-21days` rend `out/signspath-21days.mp4`.
