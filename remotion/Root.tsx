@@ -32,6 +32,8 @@ import { Platforms } from "./platforms/Platforms";
 import { DURATION_FRAMES as PLATFORMS_FRAMES } from "./platforms/timing";
 import { BrowserTour } from "./browsertour/BrowserTour";
 import { Kinetik2 } from "./kinetik2/Kinetik2";
+import { Kinetik3 } from "./kinetik3/Kinetik3";
+import { DURATION_FRAMES as KINETIK3_FRAMES } from "./kinetik3/timing";
 import { Days21 } from "./signspath3/Days21";
 import { Tuesday } from "./signspath4/Tuesday";
 import { EyesClosed } from "./signspath5/EyesClosed";
@@ -81,6 +83,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition id="Platforms" component={Platforms} durationInFrames={PLATFORMS_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="BrowserTour" component={BrowserTour} durationInFrames={BROWSERTOUR_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikDay2" component={Kinetik2} durationInFrames={KINETIK2_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikTutorial" component={Kinetik3} durationInFrames={KINETIK3_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEyesClosed" component={EyesClosed} durationInFrames={EYES_FRAMES} fps={30} width={1080} height={1920} />

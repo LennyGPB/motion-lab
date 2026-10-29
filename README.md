@@ -250,3 +250,19 @@ Composition `SignsPathOneYear` (1080x1920, 22,3 s), dans le style SignsPath.
 
 - Voix : `public/signspath/voice6.mp3` (normalisée). Timing : `remotion/signspath6/timing.ts`.
 - `npm run render:signspath-oneyear` rend `out/signspath-one-year.mp4`.
+
+### Motion « Kinetik — tuto motion design en 2 secondes » (vertical, anglais, voix)
+
+Composition `KinetikTutorial` (1080x1920, 26,2 s), style Kinetik (grille néon, sous-titres mot à mot, glitchs) avec les vraies captures du site.
+1. Accroche : « How do you create a MOTION GRAPHIC », « 2 SECONDS » sur un anneau, puis le logo Kinetik.
+2. Étape 1 : la page d'accueil en 3D ; le curseur clique sur « Create my video » (zoom).
+3. Étape 2 : « What are we creating today? » ; clic sur la carte « Motion design ».
+4. Étape 3 : un mur 3D de modèles qui défile, compteur 0 → 250+.
+5. Étape 4 : le formulaire, « Flowly » se tape dans le champ.
+6. Étape 5 : l'écran des couleurs, puis celui de la musique passe devant (clic sur « Body On Body »).
+7. « Kinetik syncs everything » : couleurs, musique et modèle volent dans le téléphone, barre de synchro.
+8. « DONE! » + la vidéo prête dans un téléphone 3D.
+9. Teaser de l'éditeur (timeline, propriétés), puis « Follow for PART 2 » avec le bouton Follow cliqué.
+
+- Captures : `public/kinetik3/screens/` (website, create, brand, colors, music). Les zones cliquées sont réglées dans `remotion/kinetik3/Kinetik3.tsx`.
+- `npm run render:kinetik-tuto` rend `out/kinetik-tutorial.mp4` ; `npm run sfx:kinetik-tuto` régénère la musique et les effets.
