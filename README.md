@@ -225,3 +225,15 @@ Composition `SignsPathTuesday` (1080x1920, 25,4 s), dans le style SignsPath.
 
 - Voix : `public/signspath/voice4.mp3` (normalisée). Timing : `remotion/signspath4/timing.ts`.
 - `npm run render:signspath-tuesday` rend `out/signspath-tuesday.mp4`.
+
+### Motion SignsPath #5 « 5 minutes, eyes closed » (vertical, anglais, voix)
+
+Composition `SignsPathEyesClosed` (1080x1920, 24 s), dans le style SignsPath.
+1. « 5 minutes. Eyes closed. That's all. » : cadran 5:00 qui se trace, l'œil se ferme (cils), la scène s'assombrit.
+2. « Pick a single scene. A precise one, already real. » : un nuage de scènes floues, une seule est choisie, le viseur se resserre, la scène prend ses couleurs (« ✓ already real »).
+3. « What do you see / hear / feel… » : la scène, avec scintillements, ondes sonores puis chaleur qui respire ; trois pictos see · hear · feel s'allument.
+4. « Stay there a few seconds before opening your eyes. » : orbe qui respire, trois points de secondes, l'œil s'ouvre dans un halo.
+5. Finale « Manifest with method » + signspath.com.
+
+- Voix : `public/signspath/voice5.mp3` (normalisée). Timing : `remotion/signspath5/timing.ts`.
+- `npm run render:signspath-eyes` rend `out/signspath-eyes-closed.mp4`.
