@@ -52,7 +52,9 @@
     "render:kinetik-features": "remotion render remotion/index.ts KinetikFeatures out/kinetik-features.mp4 --codec=h264 --audio-codec=aac",
     "sfx:kinetik-features": "python3 scripts/generate_sfx_kinetik5.py",
     "render:signspath-night": "remotion render remotion/index.ts SignsPathNight out/signspath-night.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:signspath-night": "python3 scripts/generate_sfx_signspath_night.py"
+    "sfx:signspath-night": "python3 scripts/generate_sfx_signspath_night.py",
+    "render:signspath-repeat": "remotion render remotion/index.ts SignsPathRepeat out/signspath-repeat.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:signspath-repeat": "python3 scripts/generate_sfx_signspath_repeat.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

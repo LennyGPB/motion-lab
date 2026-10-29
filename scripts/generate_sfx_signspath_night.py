@@ -46,13 +46,14 @@ def bell(f, d=4.0):
     return g.reverb(x * 0.2 * g.env(len(tt), 0.01, 1.0), 0.5, 2.5)
 
 
-def music():
-    buf = np.zeros(int(DUR * SR))
+def music(dur=None, bells=(3.0, 7.9, 12.6, 17.0, 20.4, 24.6)):
+    DUR_ = dur or DUR
+    buf = np.zeros(int(DUR_ * SR))
     seg = 7.5
     k = 0
     st = 0.0
-    while st < DUR:
-        d = min(seg + 2.5, DUR - st)
+    while st < DUR_:
+        d = min(seg + 2.5, DUR_ - st)
         x = pad_chord(CHORDS[k % 4], d)
         i = int(st * SR)
         buf[i : i + len(x)] += x[: len(buf) - i]
@@ -63,7 +64,7 @@ def music():
     buf += air
     # cloches rares (pentatonique)
     notes = [880.0, 987.77, 1174.66, 1318.51, 1567.98]
-    for j, at in enumerate([3.0, 7.9, 12.6, 17.0, 20.4, 24.6]):
+    for j, at in enumerate(bells):
         b = bell(notes[j % len(notes)])
         i = int(at * SR)
         buf[i : i + len(b)] += b[: len(buf) - i] * 0.6
