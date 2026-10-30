@@ -323,3 +323,11 @@ Composition `SignsPathRepeat` (1080x1920, 35,8 s), même ambiance que « Night a
 Composition `SignsPathMorning` (1080x1920, 40,4 s), même principe que « Repeat after me » (3 s de silence après chaque phrase pour répéter), version matin : un soleil se lève et l'aube se réchauffe au fil des 5 affirmations.
 - Voix recomposée + écho : `public/signspath/morning/voice.wav` ; musique : `npm run sfx:signspath-morning`.
 - `npm run render:signspath-morning` rend `out/signspath-morning.mp4`.
+
+### Motions SignsPath #10–11 « Money mantra » et « Growth mantra » (vertical, anglais, voix avec écho)
+
+Compositions `SignsPathMoney` (39,2 s) et `SignsPathSkill` (36,3 s), un seul composant (`remotion/signspath10/Mantra.tsx`) piloté par `remotion/signspath10/config.ts` : la même phrase répétée 5 fois, 3 s de silence après chaque répétition, anneau « your turn · repeat », progression 1 → 5, fin « 5 / 5 · well done » + signspath.com.
+- Money : visuel hypnotique (spirale qui tourne de plus en plus, anneaux qui s'enfoncent en tunnel, respiration lente de l'image).
+- Skill : 12 mois de barres qui poussent au fil des répétitions.
+- Voix recomposées + écho : `public/signspath/{money,skill}/voice.wav` ; musiques : `npm run sfx:signspath-mantras`.
+- `npm run render:signspath-money` / `npm run render:signspath-skill`.

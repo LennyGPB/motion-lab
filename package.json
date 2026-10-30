@@ -56,7 +56,10 @@
     "render:signspath-repeat": "remotion render remotion/index.ts SignsPathRepeat out/signspath-repeat.mp4 --codec=h264 --audio-codec=aac",
     "sfx:signspath-repeat": "python3 scripts/generate_sfx_signspath_repeat.py",
     "render:signspath-morning": "remotion render remotion/index.ts SignsPathMorning out/signspath-morning.mp4 --codec=h264 --audio-codec=aac",
-    "sfx:signspath-morning": "python3 scripts/generate_sfx_signspath_morning.py"
+    "sfx:signspath-morning": "python3 scripts/generate_sfx_signspath_morning.py",
+    "render:signspath-money": "remotion render remotion/index.ts SignsPathMoney out/signspath-money.mp4 --codec=h264 --audio-codec=aac",
+    "render:signspath-skill": "remotion render remotion/index.ts SignsPathSkill out/signspath-skill.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:signspath-mantras": "python3 scripts/generate_sfx_signspath_mantras.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",
