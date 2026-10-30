@@ -317,3 +317,9 @@ Composition `SignsPathRepeat` (1080x1920, 35,8 s), même ambiance que « Night a
 - Intro « Repeat after me. » (« 5 affirmations · 3 seconds each »), puis 5 affirmations : chacune s'écrit mot à mot, puis l'anneau autour de l'orbe se remplit pendant les 3 s de pause (« your turn · repeat », 3 points qui s'allument). L'orbe gagne en lumière à chaque affirmation répétée.
 - Fin : « 5 / 5 · well done », « Full guide at signspath.com ».
 - `npm run render:signspath-repeat` rend `out/signspath-repeat.mp4` ; `npm run sfx:signspath-repeat` régénère la musique.
+
+### Motion SignsPath #9 « Morning affirmations » (vertical, anglais, voix avec écho)
+
+Composition `SignsPathMorning` (1080x1920, 40,4 s), même principe que « Repeat after me » (3 s de silence après chaque phrase pour répéter), version matin : un soleil se lève et l'aube se réchauffe au fil des 5 affirmations.
+- Voix recomposée + écho : `public/signspath/morning/voice.wav` ; musique : `npm run sfx:signspath-morning`.
+- `npm run render:signspath-morning` rend `out/signspath-morning.mp4`.

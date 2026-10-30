@@ -44,6 +44,8 @@ import { EyesClosed } from "./signspath5/EyesClosed";
 import { OneYear } from "./signspath6/OneYear";
 import { Night } from "./signspath7/Night";
 import { Repeat } from "./signspath8/Repeat";
+import { Morning } from "./signspath9/Morning";
+import { DURATION_FRAMES as MORNING_FRAMES } from "./signspath9/timing";
 import { DURATION_FRAMES as REPEAT_FRAMES } from "./signspath8/timing";
 import { DURATION_FRAMES as NIGHT_FRAMES } from "./signspath7/timing";
 import { DURATION_FRAMES as ONEYEAR_FRAMES } from "./signspath6/timing";
@@ -100,6 +102,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SignsPathOneYear" component={OneYear} durationInFrames={ONEYEAR_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathNight" component={Night} durationInFrames={NIGHT_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathRepeat" component={Repeat} durationInFrames={REPEAT_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathMorning" component={Morning} durationInFrames={MORNING_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
