@@ -61,7 +61,10 @@
     "render:signspath-skill": "remotion render remotion/index.ts SignsPathSkill out/signspath-skill.mp4 --codec=h264 --audio-codec=aac",
     "sfx:signspath-mantras": "python3 scripts/generate_sfx_signspath_mantras.py",
     "render:signspath-intention": "remotion render remotion/index.ts SignsPathIntention out/signspath-intention.mp4 --codec=h264 --audio-codec=aac",
-    "render:signspath-howlong": "remotion render remotion/index.ts SignsPathHowLong out/signspath-howlong.mp4 --codec=h264 --audio-codec=aac"
+    "render:signspath-howlong": "remotion render remotion/index.ts SignsPathHowLong out/signspath-howlong.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-promo": "remotion render remotion/index.ts KinetikPromo1 out/kinetik-promo.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-promo2": "remotion render remotion/index.ts KinetikPromo2 out/kinetik-promo2.mp4 --codec=h264 --audio-codec=aac",
+    "sfx:kinetik-promos": "python3 scripts/generate_sfx_kinetik_promos.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

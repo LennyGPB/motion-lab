@@ -341,3 +341,10 @@ Composition `SignsPathIntention` (1080x1920, 28,6 s), style SignsPath classique 
 
 Composition `SignsPathHowLong` (1080x1920, 27,8 s), style SignsPath classique : sondage « A few days? / A few months? / Years? », frise de durée barrée (« nobody tells you »), cartes clarity + consistency, « 3 min every day beat 1 hour a week » (« consistency wins »), faux commentaire qui se tape, puis la finale « Manifest with method ».
 - Voix : `public/signspath/voice-howlong.mp3`. `npm run render:signspath-howlong` rend `out/signspath-howlong.mp4`.
+
+### Pubs Kinetik « Need motion design? » et « Going back and forth… » (vertical, anglais, voix Derek)
+
+Compositions `KinetikPromo1` (20,2 s) et `KinetikPromo2` (20,8 s), style Kinetik, dans `remotion/kinetik6/Promos.tsx` (réutilise les captures des tutos et de la page Templates).
+- Pub 1 : « MOTION DESIGN » + téléphone et cartes de modèles, « FAST » en vitesse, « HOURS PROMPTING an AI? » (bulles de chat génériques + chrono), logo + « kinetik-app.com » tapé + page d'accueil, pages Motion puis Community, le formulaire de marque où se tapent l'URL puis le nom, « KINETIK HANDLES THE REST » (vidéo générée), carte de fin.
+- Pub 2 : bulles qui font des allers-retours (« attempt 50 / 50 »), crédits qui fondent de 100 à 0, « THE FIX: », kinetik-app.com, mur de modèles qui tombent, l'éditeur (« TWEAK IT »), « TIME… and MONEY. », carte de fin.
+- Musiques : `npm run sfx:kinetik-promos`. Rendus : `npm run render:kinetik-promo` / `npm run render:kinetik-promo2`.

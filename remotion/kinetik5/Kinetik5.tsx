@@ -40,7 +40,7 @@ const HITS: [number, number][] = [
   [T.follow, 14],
 ];
 const SW = 980;
-const AR: Record<string, number> = {
+export const AR: Record<string, number> = {
   instagram: 1.463,
   signature: 1.462,
   physical: 1.438,
@@ -95,7 +95,7 @@ const CARDS: { src: string; x: number; y: number; w: number; h: number }[] = [
   })),
 ];
 /** Recadre une carte de modèle dans une capture. */
-const CardCrop: React.FC<{ i: number; w: number; glow?: number }> = ({
+export const CardCrop: React.FC<{ i: number; w: number; glow?: number }> = ({
   i,
   w,
   glow = 0,
@@ -134,7 +134,7 @@ const CardCrop: React.FC<{ i: number; w: number; glow?: number }> = ({
   );
 };
 
-const Tag: React.FC<{ f: number; a: number; label: string; top?: number }> = ({
+export const Tag: React.FC<{ f: number; a: number; label: string; top?: number }> = ({
   f,
   a,
   label,
@@ -179,7 +179,7 @@ const Tag: React.FC<{ f: number; a: number; label: string; top?: number }> = ({
 );
 
 /** Bloc de sous-titres qui laisse la place au suivant (sortie floue). */
-const Block: React.FC<{
+export const Block: React.FC<{
   f: number;
   from: number;
   to: number;
@@ -190,7 +190,7 @@ const Block: React.FC<{
   ) : null;
 
 /** Capture qui défile latéralement (zoom centré sur un point qui se déplace). */
-const PanScreen: React.FC<{
+export const PanScreen: React.FC<{
   f: number;
   a: number;
   b: number;
