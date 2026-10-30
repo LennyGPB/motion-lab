@@ -1,4 +1,4 @@
-"""Musiques des deux pubs Kinetik (même prod dynamique que « What can Kinetik do? », recalée sur chaque voix)."""
+"""Musiques des pubs Kinetik (même prod dynamique que « What can Kinetik do? », recalée sur chaque voix)."""
 
 import os
 import sys
@@ -8,10 +8,11 @@ import generate_sfx as g  # noqa: E402
 import generate_sfx_kinetik5 as k5  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "public")
-# (dossier, durée, 1er drop, début de la montée, 2e drop « Kinetik », fin) — durées : remotion/kinetik6|7/timing.ts
+# (dossier, durée, 1er drop, début de la montée, 2e drop « Kinetik », fin) — durées : remotion/kinetik6/timing.ts et remotion/kinetik8/timing.ts
 PROMOS = [
     ("kinetik6", 20.2, 3.35, 6.75, 7.31, 18.7),
     ("kinetik7", 20.8, 3.99, 5.95, 6.52, 19.3),
+    ("kinetik8", 16.4, 4.91, 11.7, 12.41, 15.3),
 ]
 
 if __name__ == "__main__":

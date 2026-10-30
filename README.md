@@ -348,3 +348,9 @@ Compositions `KinetikPromo1` (20,2 s) et `KinetikPromo2` (20,8 s), style Kinetik
 - Pub 1 : « MOTION DESIGN » + téléphone et cartes de modèles, « FAST » en vitesse, « HOURS PROMPTING an AI? » (bulles de chat génériques + chrono), logo + « kinetik-app.com » tapé + page d'accueil, pages Motion puis Community, le formulaire de marque où se tapent l'URL puis le nom, « KINETIK HANDLES THE REST » (vidéo générée), carte de fin.
 - Pub 2 : bulles qui font des allers-retours (« attempt 50 / 50 »), crédits qui fondent de 100 à 0, « THE FIX: », kinetik-app.com, mur de modèles qui tombent, l'éditeur (« TWEAK IT »), « TIME… and MONEY. », carte de fin.
 - Musiques : `npm run sfx:kinetik-promos`. Rendus : `npm run render:kinetik-promo` / `npm run render:kinetik-promo2`.
+
+### Pub Kinetik « Agency » (vertical, anglais, voix Derek) — nouveau fond « verre cannelé »
+
+Composition `KinetikAgency` (16,4 s). Fond `remotion/kinetik8/FlutedBg.tsx` : des rubans de couleur orange/violet qui ondulent sur du noir, vus à travers du verre cannelé (bandes verticales qui réfractent le fluide, avec une ondulation le long de chaque cannelure). Paramètres `heat`, `speed`, `stripe`.
+- Devis d'agence générique ($2,000 qui compte, 3 weeks), « With Kinetik you GENERATE IT IN SECONDS » (téléphone + barre), l'éditeur (« TWEAK IT »), carrousel 3D de vrais modèles (« 100+ CUSTOM-MADE TEMPLATES »), « SAME PRO LOOK. NO INVOICE. » avec le devis à $0 tamponné VOID, carte de fin.
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-agency`.

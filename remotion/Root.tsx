@@ -36,6 +36,8 @@ import { Kinetik3 } from "./kinetik3/Kinetik3";
 import { Kinetik4 } from "./kinetik4/Kinetik4";
 import { Kinetik5 } from "./kinetik5/Kinetik5";
 import { KinetikPromo1, KinetikPromo2 } from "./kinetik6/Promos";
+import { Agency } from "./kinetik8/Agency";
+import { DURATION_FRAMES as AGENCY_FRAMES } from "./kinetik8/timing";
 import { P1_FRAMES, P2_FRAMES } from "./kinetik6/timing";
 import { DURATION_FRAMES as KINETIK5_FRAMES } from "./kinetik5/timing";
 import { DURATION_FRAMES as KINETIK4_FRAMES } from "./kinetik4/timing";
@@ -106,6 +108,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="KinetikFeatures" component={Kinetik5} durationInFrames={KINETIK5_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikPromo1" component={KinetikPromo1} durationInFrames={P1_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikPromo2" component={KinetikPromo2} durationInFrames={P2_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikAgency" component={Agency} durationInFrames={AGENCY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEyesClosed" component={EyesClosed} durationInFrames={EYES_FRAMES} fps={30} width={1080} height={1920} />
