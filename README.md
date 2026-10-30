@@ -331,3 +331,8 @@ Compositions `SignsPathMoney` (39,2 s) et `SignsPathSkill` (36,3 s), un seul com
 - Skill : 12 mois de barres qui poussent au fil des répétitions.
 - Voix recomposées + écho : `public/signspath/{money,skill}/voice.wav` ; musiques : `npm run sfx:signspath-mantras`.
 - `npm run render:signspath-money` / `npm run render:signspath-skill`.
+
+### Motion SignsPath #12 « Intention » (vertical, anglais, voix)
+
+Composition `SignsPathIntention` (1080x1920, 28,6 s), style SignsPath classique : « What's your biggest intention? », « CAREFUL » + « I want more money » barré qui s'envole comme un vœu, 3 cartes (number / deadline / path), la version précise avec ses 3 pastilles (+€500/month, within 3 months, through a skill), « wish » vs « intention », un faux commentaire qui se tape, puis la finale « Manifest with method ».
+- Voix : `public/signspath/voice-intention.mp3`. `npm run render:signspath-intention` rend `out/signspath-intention.mp4`.
