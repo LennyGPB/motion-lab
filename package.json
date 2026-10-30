@@ -65,7 +65,8 @@
     "render:kinetik-promo": "remotion render remotion/index.ts KinetikPromo1 out/kinetik-promo.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-promo2": "remotion render remotion/index.ts KinetikPromo2 out/kinetik-promo2.mp4 --codec=h264 --audio-codec=aac",
     "sfx:kinetik-promos": "python3 scripts/generate_sfx_kinetik_promos.py",
-    "render:kinetik-agency": "remotion render remotion/index.ts KinetikAgency out/kinetik-agency.mp4 --codec=h264 --audio-codec=aac"
+    "render:kinetik-agency": "remotion render remotion/index.ts KinetikAgency out/kinetik-agency.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-comment": "remotion render remotion/index.ts KinetikComment out/kinetik-comment.mp4 --codec=h264 --audio-codec=aac"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

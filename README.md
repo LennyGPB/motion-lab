@@ -354,3 +354,8 @@ Compositions `KinetikPromo1` (20,2 s) et `KinetikPromo2` (20,8 s), style Kinetik
 Composition `KinetikAgency` (16,4 s). Fond `remotion/kinetik8/FlutedBg.tsx` : des rubans de couleur orange/violet qui ondulent sur du noir, vus à travers du verre cannelé (bandes verticales qui réfractent le fluide, avec une ondulation le long de chaque cannelure). Paramètres `heat`, `speed`, `stripe`.
 - Devis d'agence générique ($2,000 qui compte, 3 weeks), « With Kinetik you GENERATE IT IN SECONDS » (téléphone + barre), l'éditeur (« TWEAK IT »), carrousel 3D de vrais modèles (« 100+ CUSTOM-MADE TEMPLATES »), « SAME PRO LOOK. NO INVOICE. » avec le devis à $0 tamponné VOID, carte de fin.
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-agency`.
+
+### Pub Kinetik « Comment MOTION » (vertical, anglais, voix Derek)
+
+Composition `KinetikComment` (18,9 s), même habillage que « Agency » (fond verre cannelé orange/violet). Fil de commentaires où 5 personnes écrivent « MOTION » et reçoivent un badge 🎁 discount, téléphone qui génère en 2 s avec un éventail de vrais modèles, l'éditeur, « NO MORE STRUGGLING » barré (messages de galère qui s'effacent), boîte de DM « Here's your Kinetik discount! » envoyée aux 5, logo + « Comment “MOTION” ↓ ».
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-comment`.
