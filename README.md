@@ -336,3 +336,8 @@ Compositions `SignsPathMoney` (39,2 s) et `SignsPathSkill` (36,3 s), un seul com
 
 Composition `SignsPathIntention` (1080x1920, 28,6 s), style SignsPath classique : « What's your biggest intention? », « CAREFUL » + « I want more money » barré qui s'envole comme un vœu, 3 cartes (number / deadline / path), la version précise avec ses 3 pastilles (+€500/month, within 3 months, through a skill), « wish » vs « intention », un faux commentaire qui se tape, puis la finale « Manifest with method ».
 - Voix : `public/signspath/voice-intention.mp3`. `npm run render:signspath-intention` rend `out/signspath-intention.mp4`.
+
+### Motion SignsPath #13 « How long » (vertical, anglais, voix)
+
+Composition `SignsPathHowLong` (1080x1920, 27,8 s), style SignsPath classique : sondage « A few days? / A few months? / Years? », frise de durée barrée (« nobody tells you »), cartes clarity + consistency, « 3 min every day beat 1 hour a week » (« consistency wins »), faux commentaire qui se tape, puis la finale « Manifest with method ».
+- Voix : `public/signspath/voice-howlong.mp3`. `npm run render:signspath-howlong` rend `out/signspath-howlong.mp4`.

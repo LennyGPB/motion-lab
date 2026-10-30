@@ -47,6 +47,8 @@ import { Repeat } from "./signspath8/Repeat";
 import { Morning } from "./signspath9/Morning";
 import { MoneyMantra, SkillMantra } from "./signspath10/Mantra";
 import { Intention } from "./signspath12/Intention";
+import { HowLong } from "./signspath13/HowLong";
+import { DURATION_FRAMES as HOWLONG_FRAMES } from "./signspath13/timing";
 import { DURATION_FRAMES as INTENTION_FRAMES } from "./signspath12/timing";
 import { MONEY, SKILL } from "./signspath10/config";
 import { DURATION_FRAMES as MORNING_FRAMES } from "./signspath9/timing";
@@ -110,6 +112,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SignsPathMoney" component={MoneyMantra} durationInFrames={Math.round(MONEY.duration * 30)} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathSkill" component={SkillMantra} durationInFrames={Math.round(SKILL.duration * 30)} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathIntention" component={Intention} durationInFrames={INTENTION_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathHowLong" component={HowLong} durationInFrames={HOWLONG_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
