@@ -359,3 +359,8 @@ Composition `KinetikAgency` (16,4 s). Fond `remotion/kinetik8/FlutedBg.tsx` : de
 
 Composition `KinetikComment` (18,9 s), même habillage que « Agency » (fond verre cannelé orange/violet). Fil de commentaires où 5 personnes écrivent « MOTION » et reçoivent un badge 🎁 discount, téléphone qui génère en 2 s avec un éventail de vrais modèles, l'éditeur, « NO MORE STRUGGLING » barré (messages de galère qui s'effacent), boîte de DM « Here's your Kinetik discount! » envoyée aux 5, logo + « Comment “MOTION” ↓ ».
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-comment`.
+
+### Motion SignsPath #14 « Manifestation ebook » (vertical, anglais, voix)
+
+Composition `SignsPathEbook` (1080x1920, 56,2 s), style SignsPath classique : bouton Follow tapé + commentaire « Manifestation » qui se tape, DM privé avec l'ebook et la réduction, « yes, to everyone » (12 commentaires qui reçoivent ✓ dm sent), l'ebook en 3D (« a real method »), intention + répétition, les 3 techniques (369, scripting, vision), les 8 domaines qui s'allument un à un, le workbook qui s'écrit puis tourne la page, l'espoir flou qui se range en grille de jours pratiqués, puis le récap en 3 étapes et signspath.com.
+- Voix : `public/signspath/voice-ebook.mp3`. `npm run render:signspath-ebook` rend `out/signspath-ebook.mp4`.

@@ -54,6 +54,8 @@ import { Morning } from "./signspath9/Morning";
 import { MoneyMantra, SkillMantra } from "./signspath10/Mantra";
 import { Intention } from "./signspath12/Intention";
 import { HowLong } from "./signspath13/HowLong";
+import { Ebook } from "./signspath14/Ebook";
+import { DURATION_FRAMES as EBOOK_FRAMES } from "./signspath14/timing";
 import { DURATION_FRAMES as HOWLONG_FRAMES } from "./signspath13/timing";
 import { DURATION_FRAMES as INTENTION_FRAMES } from "./signspath12/timing";
 import { MONEY, SKILL } from "./signspath10/config";
@@ -123,6 +125,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SignsPathSkill" component={SkillMantra} durationInFrames={Math.round(SKILL.duration * 30)} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathIntention" component={Intention} durationInFrames={INTENTION_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathHowLong" component={HowLong} durationInFrames={HOWLONG_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathEbook" component={Ebook} durationInFrames={EBOOK_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
