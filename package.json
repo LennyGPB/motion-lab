@@ -68,7 +68,8 @@
     "render:kinetik-agency": "remotion render remotion/index.ts KinetikAgency out/kinetik-agency.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-comment": "remotion render remotion/index.ts KinetikComment out/kinetik-comment.mp4 --codec=h264 --audio-codec=aac",
     "render:signspath-ebook": "remotion render remotion/index.ts SignsPathEbook out/signspath-ebook.mp4 --codec=h264 --audio-codec=aac",
-    "render:signspath-belief": "remotion render remotion/index.ts SignsPathBelief out/signspath-belief.mp4 --codec=h264 --audio-codec=aac"
+    "render:signspath-belief": "remotion render remotion/index.ts SignsPathBelief out/signspath-belief.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-setting": "remotion render remotion/index.ts KinetikSetting out/kinetik-setting.mp4 --codec=h264 --audio-codec=aac"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",
