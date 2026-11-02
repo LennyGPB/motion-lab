@@ -364,3 +364,8 @@ Composition `KinetikComment` (18,9 s), même habillage que « Agency » (fond ve
 
 Composition `SignsPathEbook` (1080x1920, 56,2 s), style SignsPath classique : bouton Follow tapé + commentaire « Manifestation » qui se tape, DM privé avec l'ebook et la réduction, « yes, to everyone » (12 commentaires qui reçoivent ✓ dm sent), l'ebook en 3D (« a real method »), intention + répétition, les 3 techniques (369, scripting, vision), les 8 domaines qui s'allument un à un, le workbook qui s'écrit puis tourne la page, l'espoir flou qui se range en grille de jours pratiqués, puis le récap en 3 étapes et signspath.com.
 - Voix : `public/signspath/voice-ebook.mp3`. `npm run render:signspath-ebook` rend `out/signspath-ebook.mp4`.
+
+### Motion SignsPath #15 « Money belief » (vertical, anglais, voix)
+
+Composition `SignsPathBelief` (1080x1920, 36,9 s), style SignsPath classique : « money » qui tourne en boucle autour de l'orbe, les 3 phrases héritées en bulles de pensée, la maison d'enfance, le budget/stratégie avec « lack of strategy » barré, la croyance transmise grands-parents → parents → toi (« ? »), la phrase répétée en écho jour après jour, le commentaire qui s'écrit puis se transforme (« belief transformed »), puis la finale « Manifest with method ».
+- Voix : `public/signspath/voice-belief.mp3`. `npm run render:signspath-belief` rend `out/signspath-belief.mp4`.
