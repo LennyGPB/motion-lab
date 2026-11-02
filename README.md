@@ -374,3 +374,8 @@ Composition `SignsPathBelief` (1080x1920, 36,9 s), style SignsPath classique : �
 
 Composition `KinetikSetting` (18,4 s), habillage verre cannelé orange/violet : la grille de décors 3D (« SETTING. »), l'écran des couleurs (« BRAND. »), téléphone qui génère + 3 clics (« GENERATE… AUTOMATICALLY, in just a FEW CLICKS »), « kinetik-app.com » tapé devant la page d'accueil, carrousel 3D de modèles (« STUDIO-QUALITY… EFFORTLESSLY »), puis les 5 premiers « MOTION » qui reçoivent 🎁 dm sent et le logo.
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-setting`.
+
+### Pub Kinetik « Paste your website link » (vertical, anglais, voix Derek)
+
+Composition `KinetikPasteLink` (15,6 s), habillage verre cannelé : l'URL se colle (⌘V), Kinetik scanne le site fictif « Halo » et en extrait logo, couleurs et texte, la vidéo prête aux couleurs de Halo dans un téléphone (« READY. »), « no BRIEF / no HASSLE » barrés, « kinetik-app.com » tapé, puis les 5 premiers « MOTION » qui reçoivent 🎁 dm sent.
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-paste`.
