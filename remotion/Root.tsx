@@ -60,6 +60,8 @@ import { Intention } from "./signspath12/Intention";
 import { HowLong } from "./signspath13/HowLong";
 import { Ebook } from "./signspath14/Ebook";
 import { Belief } from "./signspath15/Belief";
+import { Exercise } from "./signspath16/Exercise";
+import { DURATION_FRAMES as EXERCISE_FRAMES } from "./signspath16/timing";
 import { DURATION_FRAMES as BELIEF_FRAMES } from "./signspath15/timing";
 import { DURATION_FRAMES as EBOOK_FRAMES } from "./signspath14/timing";
 import { DURATION_FRAMES as HOWLONG_FRAMES } from "./signspath13/timing";
@@ -135,6 +137,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SignsPathHowLong" component={HowLong} durationInFrames={HOWLONG_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEbook" component={Ebook} durationInFrames={EBOOK_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathBelief" component={Belief} durationInFrames={BELIEF_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathExercise" component={Exercise} durationInFrames={EXERCISE_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };

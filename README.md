@@ -379,3 +379,8 @@ Composition `KinetikSetting` (18,4 s), habillage verre cannelé orange/violet : 
 
 Composition `KinetikPasteLink` (15,6 s), habillage verre cannelé : l'URL se colle (⌘V), Kinetik scanne le site fictif « Halo » et en extrait logo, couleurs et texte, la vidéo prête aux couleurs de Halo dans un téléphone (« READY. »), « no BRIEF / no HASSLE » barrés, « kinetik-app.com » tapé, puis les 5 premiers « MOTION » qui reçoivent 🎁 dm sent.
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-paste`.
+
+### Motion SignsPath #16 « Exercise » (vertical, anglais, voix)
+
+Composition `SignsPathExercise` (1080x1920, 35,9 s), style SignsPath classique : chrono 1:00, puis une feuille et un stylo ; l'exercice s'écrit à la main étape par étape (5 étapes) : le souhait « I want more money. » (barré, tampon WISH), la version précise avec +€500 / month et by June, la réécriture au présent (tampon INTENTION ✓), lecture à voix haute ×3 ; ensuite la feuille au centre des 8 domaines de vie, puis la finale « Manifest with method ».
+- Voix : `public/signspath/voice-exercise.mp3`. `npm run render:signspath-exercise` rend `out/signspath-exercise.mp4`.
