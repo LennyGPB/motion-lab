@@ -395,3 +395,8 @@ Composition `SignsPathConfidence` (1080x1920, 28,7 s), style SignsPath classique
 Composition `KinetikDev` (17,9 s), habillage verre cannelé. Éditeur de code qui se tape (« DEV ») face à une timeline de montage barrée (« not a VIDEO EDITOR »), « FINE. », les 3 étapes (coller le lien SaaS, choisir un modèle, vidéo prête), « 0 MOTION SKILLS / 0 AFTER EFFECTS », puis la fin « Comment MOTION ».
 - Composants communs des pubs verre cannelé : `remotion/kinetik12/shared.tsx` (`FlutedShell`, `CommentOutro`).
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-dev`.
+
+### Pub Kinetik « Your launch is tomorrow » (vertical, anglais, voix Derek)
+
+Composition `KinetikLaunch` (19,7 s), habillage verre cannelé (composants communs `remotion/kinetik12/shared.tsx`) : app prête + carte « launch day » + compte à rebours qui s'accélère, cadre vidéo vide « no promo video », « kinetik-app.com » tapé, logo et 3 écrans déposés, la vidéo générée (« READY in seconds »), « you: the app ✓ / kinetik: the promo ✓ », puis la fin « Comment MOTION ».
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-launch`.

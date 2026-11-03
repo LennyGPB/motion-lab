@@ -41,6 +41,8 @@ import { CommentMotion } from "./kinetik9/CommentMotion";
 import { Setting } from "./kinetik10/Setting";
 import { PasteLink } from "./kinetik11/PasteLink";
 import { Dev } from "./kinetik12/Dev";
+import { Launch as KinetikLaunchAd } from "./kinetik13/Launch";
+import { DURATION_FRAMES as LAUNCHK_FRAMES } from "./kinetik13/timing";
 import { DURATION_FRAMES as DEV_FRAMES } from "./kinetik12/timing";
 import { DURATION_FRAMES as PASTE_FRAMES } from "./kinetik11/timing";
 import { DURATION_FRAMES as SETTING_FRAMES } from "./kinetik10/timing";
@@ -129,6 +131,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="KinetikSetting" component={Setting} durationInFrames={SETTING_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikPasteLink" component={PasteLink} durationInFrames={PASTE_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikDev" component={Dev} durationInFrames={DEV_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikLaunch" component={KinetikLaunchAd} durationInFrames={LAUNCHK_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEyesClosed" component={EyesClosed} durationInFrames={EYES_FRAMES} fps={30} width={1080} height={1920} />

@@ -8,7 +8,7 @@ import generate_sfx as g  # noqa: E402
 import generate_sfx_kinetik5 as k5  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "public")
-# (dossier, durée, 1er drop, début de la montée, 2e drop « Kinetik », fin) — durées : remotion/kinetik6/timing.ts et remotion/kinetik8…12/timing.ts
+# (dossier, durée, 1er drop, début de la montée, 2e drop « Kinetik », fin) — durées : remotion/kinetik6/timing.ts et remotion/kinetik8…13/timing.ts
 PROMOS = [
     ("kinetik6", 20.2, 3.35, 6.75, 7.31, 18.7),
     ("kinetik7", 20.8, 3.99, 5.95, 6.52, 19.3),
@@ -17,6 +17,7 @@ PROMOS = [
     ("kinetik10", 18.4, 2.86, 6.45, 7.03, 17.0),
     ("kinetik11", 15.6, 2.12, 5.6, 6.17, 14.3),
     ("kinetik12", 17.9, 2.73, 8.45, 9.12, 16.6),
+    ("kinetik13", 19.7, 3.51, 5.3, 5.86, 18.4),
 ]
 
 if __name__ == "__main__":
