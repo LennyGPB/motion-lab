@@ -384,3 +384,8 @@ Composition `KinetikPasteLink` (15,6 s), habillage verre cannelé : l'URL se col
 
 Composition `SignsPathExercise` (1080x1920, 35,9 s), style SignsPath classique : chrono 1:00, puis une feuille et un stylo ; l'exercice s'écrit à la main étape par étape (5 étapes) : le souhait « I want more money. » (barré, tampon WISH), la version précise avec +€500 / month et by June, la réécriture au présent (tampon INTENTION ✓), lecture à voix haute ×3 ; ensuite la feuille au centre des 8 domaines de vie, puis la finale « Manifest with method ».
 - Voix : `public/signspath/voice-exercise.mp3`. `npm run render:signspath-exercise` rend `out/signspath-exercise.mp4`.
+
+### Motion SignsPath #17 « Classic vs method » (vertical, anglais, voix)
+
+Composition `SignsPathConfidence` (1080x1920, 28,7 s), style SignsPath classique : carte « classic manifestation » floue (« I want more self-confidence. », tampon WISH) face à la carte « manifestation with method » nette (« I speak up in meetings, without fearing other people's judgment. », tampon INTENTION ✓) ; puis la phrase décortiquée en situation · action · résultat vérifiable (mon ✓ tue ✓ wed ✓), wish → intention, et la finale « Manifest with method ».
+- Voix : `public/signspath/voice-confidence.mp3`. `npm run render:signspath-confidence` rend `out/signspath-confidence.mp4`.
