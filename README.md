@@ -389,3 +389,9 @@ Composition `SignsPathExercise` (1080x1920, 35,9 s), style SignsPath classique :
 
 Composition `SignsPathConfidence` (1080x1920, 28,7 s), style SignsPath classique : carte « classic manifestation » floue (« I want more self-confidence. », tampon WISH) face à la carte « manifestation with method » nette (« I speak up in meetings, without fearing other people's judgment. », tampon INTENTION ✓) ; puis la phrase décortiquée en situation · action · résultat vérifiable (mon ✓ tue ✓ wed ✓), wish → intention, et la finale « Manifest with method ».
 - Voix : `public/signspath/voice-confidence.mp3`. `npm run render:signspath-confidence` rend `out/signspath-confidence.mp4`.
+
+### Pub Kinetik « You're a dev » (vertical, anglais, voix Derek)
+
+Composition `KinetikDev` (17,9 s), habillage verre cannelé. Éditeur de code qui se tape (« DEV ») face à une timeline de montage barrée (« not a VIDEO EDITOR »), « FINE. », les 3 étapes (coller le lien SaaS, choisir un modèle, vidéo prête), « 0 MOTION SKILLS / 0 AFTER EFFECTS », puis la fin « Comment MOTION ».
+- Composants communs des pubs verre cannelé : `remotion/kinetik12/shared.tsx` (`FlutedShell`, `CommentOutro`).
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-dev`.
