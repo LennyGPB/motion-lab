@@ -87,3 +87,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 __pycache__/
+!/out/kinetik-resto.mp4

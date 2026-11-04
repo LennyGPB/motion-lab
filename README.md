@@ -400,3 +400,9 @@ Composition `KinetikDev` (17,9 s), habillage verre cannelé. Éditeur de code qu
 
 Composition `KinetikLaunch` (19,7 s), habillage verre cannelé (composants communs `remotion/kinetik12/shared.tsx`) : app prête + carte « launch day » + compte à rebours qui s'accélère, cadre vidéo vide « no promo video », « kinetik-app.com » tapé, logo et 3 écrans déposés, la vidéo générée (« READY in seconds »), « you: the app ✓ / kinetik: the promo ✓ », puis la fin « Comment MOTION ».
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-launch`.
+
+### Pub Kinetik Resto « Own a restaurant? » (vertical, anglais, voix Derek)
+
+Composition `KinetikResto` (35,4 s), nouvel habillage **clair** : fond blanc avec un ruban flou orange → violet à bord net qui ondule (`SilkBg`). Restaurant fictif « Chez Lou » : vitrine, vidéos prêtes à poster face au soir sacrifié (horloge 23:40 barrée), « kinetik-app.com » tapé, le pack du lundi (menu / plat signature / happy hour), « Approve » cliqué puis publié sur Instagram/TikTok/Facebook, plat du jour photographié puis vidéo prête, menu animé sur la TV de la salle, « Kinetik Resto », puis la fin « Comment MOTION » en version claire.
+- Composants clairs communs : `remotion/kinetik14/light.tsx` (`LightShell`, `SilkBg`, `LogoDark`, `DishReel`, `LightCommentOutro`).
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-resto`.
