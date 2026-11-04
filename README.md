@@ -406,3 +406,8 @@ Composition `KinetikLaunch` (19,7 s), habillage verre cannelé (composants commu
 Composition `KinetikResto` (35,4 s), nouvel habillage **clair** : fond blanc avec un ruban flou orange → violet à bord net qui ondule (`SilkBg`). Restaurant fictif « Chez Lou » : vitrine, vidéos prêtes à poster face au soir sacrifié (horloge 23:40 barrée), « kinetik-app.com » tapé, le pack du lundi (menu / plat signature / happy hour), « Approve » cliqué puis publié sur Instagram/TikTok/Facebook, plat du jour photographié puis vidéo prête, menu animé sur la TV de la salle, « Kinetik Resto », puis la fin « Comment MOTION » en version claire.
 - Composants clairs communs : `remotion/kinetik14/light.tsx` (`LightShell`, `SilkBg`, `LogoDark`, `DishReel`, `LightCommentOutro`).
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-resto`.
+
+### Pub Kinetik Resto « Lunch service, dinner service… » (vertical, anglais, voix Derek)
+
+Composition `KinetikResto2` (38,3 s), même habillage clair (`remotion/kinetik14/light.tsx`, ruban décalé avec `phase`). Cartes service midi / soir / commandes / équipe qui s'empilent, semaine Instagram « 0 / 7 posted » avec notifications de relance, horloge qui s'emballe (« THE TIME »), « kinetik-app.com » tapé, photos + menu envoyés une seule fois (« ONCE. »), une vidéo qui tombe chaque semaine, les 4 formats (menu, plat du moment, prochain événement, avis clients), bouton « Approve », « Kinetik Resto… EFFORTLESSLY », puis la fin « Comment MOTION ».
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-resto2`.

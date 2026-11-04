@@ -75,7 +75,8 @@
     "render:signspath-confidence": "remotion render remotion/index.ts SignsPathConfidence out/signspath-confidence.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-dev": "remotion render remotion/index.ts KinetikDev out/kinetik-dev.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-launch": "remotion render remotion/index.ts KinetikLaunch out/kinetik-launch.mp4 --codec=h264 --audio-codec=aac",
-    "render:kinetik-resto": "remotion render remotion/index.ts KinetikResto out/kinetik-resto.mp4 --codec=h264 --audio-codec=aac"
+    "render:kinetik-resto": "remotion render remotion/index.ts KinetikResto out/kinetik-resto.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-resto2": "remotion render remotion/index.ts KinetikResto2 out/kinetik-resto2.mp4 --codec=h264 --audio-codec=aac"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

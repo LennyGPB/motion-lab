@@ -88,3 +88,4 @@ yarn-error.log*
 next-env.d.ts
 __pycache__/
 !/out/kinetik-resto.mp4
+!/out/kinetik-resto2.mp4
