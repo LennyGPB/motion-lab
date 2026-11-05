@@ -89,3 +89,6 @@ next-env.d.ts
 __pycache__/
 !/out/kinetik-resto.mp4
 !/out/kinetik-resto2.mp4
+!/out/signspath-promo.mp4
+!/out/signspath-futureself.mp4
+!/out/signspath-rituals.mp4

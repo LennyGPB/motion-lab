@@ -71,6 +71,12 @@ import { Belief } from "./signspath15/Belief";
 import { Exercise } from "./signspath16/Exercise";
 import { Confidence } from "./signspath17/Confidence";
 import { DURATION_FRAMES as CONFIDENCE_FRAMES } from "./signspath17/timing";
+import { Promo as SignsPromo } from "./signspath18/Promo";
+import { DURATION_FRAMES as PROMO_FRAMES } from "./signspath18/timing";
+import { FutureSelf } from "./signspath19/FutureSelf";
+import { DURATION_FRAMES as FUTURE_FRAMES } from "./signspath19/timing";
+import { Rituals } from "./signspath20/Rituals";
+import { DURATION_FRAMES as RITUALS_FRAMES } from "./signspath20/timing";
 import { DURATION_FRAMES as EXERCISE_FRAMES } from "./signspath16/timing";
 import { DURATION_FRAMES as BELIEF_FRAMES } from "./signspath15/timing";
 import { DURATION_FRAMES as EBOOK_FRAMES } from "./signspath14/timing";
@@ -153,6 +159,9 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SignsPathBelief" component={Belief} durationInFrames={BELIEF_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathExercise" component={Exercise} durationInFrames={EXERCISE_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathConfidence" component={Confidence} durationInFrames={CONFIDENCE_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathPromo" component={SignsPromo} durationInFrames={PROMO_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathFutureSelf" component={FutureSelf} durationInFrames={FUTURE_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathRituals" component={Rituals} durationInFrames={RITUALS_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
