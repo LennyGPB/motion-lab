@@ -432,3 +432,13 @@ Composition `KinetikAllIn3` (21,8 s), nouveau fond **relief de lignes** (`remoti
 Nouveau fond pour Signs : métal liquide violet animé (`remotion/signspath21/Liquid.tsx`). C'est un champ de hauteur déformé, calculé en basse résolution puis agrandi, avec reflets spéculaires et lignes brillantes ; il accélère et zoome à chaque coupe. Les transitions 3D sont communes (`remotion/signspath21/stage.tsx`, `Stage3D`) : rotation en cube, bascule, plongée, balancier.
 - `SignsPathScripting` (28,6 s) — « Scripting is the most underrated manifestation technique » : carnet 3D qui s'écrit tout seul, téléphone qui pivote, les 3 règles (passé → présent, « I will » barré → « I am »), le script « Today, I feel calm, because I finally… » tapé, page blanche qui se retourne en prompt personnalisé, preuves en orbite 3D autour de l'orbe, puis les stores. Rendu : `npm run render:signspath-scripting`.
 - `SignsPathSentence` (29,1 s) — « One sentence in your head is blocking your manifestation » : rayon de lumière bloqué par la phrase, loupe qui trouve la phrase puis réécriture, les 3 phrases qui arrivent du fond en 3D, la phrase qui tourne en boucle sur un cylindre 3D, carte qui se retourne de l'ancienne croyance vers « I'm capable and I'm learning » avec une jauge « believable », écran de répétition au lever du soleil, puis les stores. Rendu : `npm run render:signspath-sentence`.
+
+### Pub Kinetik « All in one place » (vertical, anglais, voix Derek)
+
+Composition `KinetikOnePlace` (20,3 s), style Kinetik d'origine (grille néon cyan, glitchs). Trois fenêtres d'outils génériques (montage, posts, motion) arrivent en 3D, puis se resserrent autour de « you » (« STUCK », sol qui vire au rouge). Elles fusionnent ensuite dans Kinetik (« ALL IN ONE PLACE »). Suivent « PICK. ADAPT. EXPORT. » sur les vraies captures (choix du template, couleurs, export à 100 %) avec le tampon « DONE. », l'URL tapée au-dessus du site, et la fin « Comment MOTION » en cyan.
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-oneplace`.
+
+### Pub Kinetik « Full creative studio » (vertical, anglais, voix Derek)
+
+Composition `KinetikStudio` (21,9 s), habillage verre cannelé orange/violet. « no TIME / no BUDGET / no SKILLS? » sur trois cartes 3D barrées, puis « FULL CREATIVE STUDIO » : deux portes 3D qui s'ouvrent sur l'app, et une barre « ready in seconds ». Ensuite les 4 formats (vidéo, logo animé, posts, visuel) qui arrivent du fond, puis pivotent et prennent les couleurs de la marque (« ✓ automatically »). L'URL est tapée au-dessus du site, et la fin « Comment MOTION ».
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-studio`.

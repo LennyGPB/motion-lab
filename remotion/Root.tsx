@@ -48,6 +48,10 @@ import { Resto2 as KinetikResto2Ad } from "./kinetik15/Resto2";
 import { DURATION_FRAMES as RESTO2_FRAMES } from "./kinetik15/timing";
 import { AllIn3 } from "./kinetik16/AllIn3";
 import { DURATION_FRAMES as ALLIN3_FRAMES } from "./kinetik16/timing";
+import { OnePlace } from "./kinetik17/OnePlace";
+import { DURATION_FRAMES as ONEPLACE_FRAMES } from "./kinetik17/timing";
+import { Studio as KinetikStudioAd } from "./kinetik18/Studio";
+import { DURATION_FRAMES as STUDIO_FRAMES } from "./kinetik18/timing";
 import { DURATION_FRAMES as LAUNCHK_FRAMES } from "./kinetik13/timing";
 import { DURATION_FRAMES as DEV_FRAMES } from "./kinetik12/timing";
 import { DURATION_FRAMES as PASTE_FRAMES } from "./kinetik11/timing";
@@ -79,6 +83,10 @@ import { FutureSelf } from "./signspath19/FutureSelf";
 import { DURATION_FRAMES as FUTURE_FRAMES } from "./signspath19/timing";
 import { Rituals } from "./signspath20/Rituals";
 import { DURATION_FRAMES as RITUALS_FRAMES } from "./signspath20/timing";
+import { Scripting } from "./signspath21/Scripting";
+import { DURATION_FRAMES as SCRIPTING_FRAMES } from "./signspath21/timing";
+import { Sentence } from "./signspath22/Sentence";
+import { DURATION_FRAMES as SENTENCE_FRAMES } from "./signspath22/timing";
 import { DURATION_FRAMES as EXERCISE_FRAMES } from "./signspath16/timing";
 import { DURATION_FRAMES as BELIEF_FRAMES } from "./signspath15/timing";
 import { DURATION_FRAMES as EBOOK_FRAMES } from "./signspath14/timing";
@@ -147,6 +155,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="KinetikResto" component={KinetikRestoAd} durationInFrames={RESTO_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikResto2" component={KinetikResto2Ad} durationInFrames={RESTO2_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikAllIn3" component={AllIn3} durationInFrames={ALLIN3_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikOnePlace" component={OnePlace} durationInFrames={ONEPLACE_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikStudio" component={KinetikStudioAd} durationInFrames={STUDIO_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEyesClosed" component={EyesClosed} durationInFrames={EYES_FRAMES} fps={30} width={1080} height={1920} />
@@ -165,6 +175,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SignsPathPromo" component={SignsPromo} durationInFrames={PROMO_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathFutureSelf" component={FutureSelf} durationInFrames={FUTURE_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathRituals" component={Rituals} durationInFrames={RITUALS_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathScripting" component={Scripting} durationInFrames={SCRIPTING_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="SignsPathSentence" component={Sentence} durationInFrames={SENTENCE_FRAMES} fps={30} width={1080} height={1920} />
     </>
   );
 };
