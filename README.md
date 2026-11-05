@@ -418,3 +418,11 @@ Trois pubs pour l'app mobile Signs, style SignsPath (violet, Manrope + Instrumen
 - `SignsPathPromo` (30 s) — « Your manifestation isn't working… » : barre « manifesting… » bloquée à 12 %, « wishing » (étoile filante) vs « manifesting », les 3 étapes (intention, croyance, action quotidienne) dont la 3ᵉ « SKIPPED », les 3 écrans de l'app, « under 5 minutes a day », finale « Manifest with method » puis le logo dans la sphère et les stores. Rendu : `npm run render:signspath-promo`.
 - `SignsPathFutureSelf` (22,5 s) — « You attract who you are » : ce qu'on veut qui s'éloigne / la silhouette qui s'allume, futur soi vs tableau de vision, frise « today → +6 months », état d'esprit et actions, écrans de l'app « define / become », « one ritual at a time », puis les stores. Rendu : `npm run render:signspath-futureself`.
 - `SignsPathRituals` (23,5 s) — « 5 minutes in the morning. 5 minutes at night. » : deux minuteurs soleil / lune, le rituel du matin (énergie, affirmation, action) avec l'écran de répétition, le journal du soir (signe, preuve, ressenti), 30 jours qui se remplissent et une courbe qui monte, puis les stores. Rendu : `npm run render:signspath-rituals`.
+
+### Pub Kinetik « Get it all in 3 seconds » (vertical, anglais, voix Derek)
+
+Composition `KinetikAllIn3` (21,8 s), nouveau fond **relief de lignes** (`remotion/kinetik16/Waves.tsx`) : des centaines de lignes blanches déformées par un champ de hauteur 3D, teintées de bleu, avec des tirets bleus qui défilent. Le fond accélère et se pince à chaque coupe. Transitions 3D entre les scènes : rotation de cube, plongée de caméra, bascule depuis le sol.
+- Carrousel 3D de 4 faces (motion design, posts Instagram/TikTok, montage vidéo, design) qui tourne à chaque mot, puis s'emballe sur « GET IT ALL ». Un chrono descend de 3,0 s, et le carrousel implose dans le logo Kinetik avec une onde de choc.
+- Mur 3D incliné de templates qui défile (« 500+ templates »). Un template vient au premier plan, les pastilles de marque l'atteignent et il se recolore sur « SNAP! ».
+- « HANDLES THE REST » avec la vraie capture de l'app en 3D et une barre de rendu, puis « kinetik-app.com » en lettres extrudées au-dessus du site, et la fin « Comment MOTION » en bleu (`CommentOutro` accepte maintenant d'autres couleurs).
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-allin3`.

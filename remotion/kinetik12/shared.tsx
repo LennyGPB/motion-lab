@@ -59,11 +59,11 @@ export const FlutedShell: React.FC<{
 };
 
 /** Fin commune : « Comment MOTION: the first 5 get a discount in their DMs! » + 5 commentaires + DM + logo. */
-export const CommentOutro: React.FC<{ f: number; a: number; t: { comment: number; motion: number; the: number; five: number; get: number; discount: number; dms: number; end: number } }> = ({ f, a, t }) => (
+export const CommentOutro: React.FC<{ f: number; a: number; t: { comment: number; motion: number; the: number; five: number; get: number; discount: number; dms: number; end: number }; c1?: string; c2?: string; glow?: string; box?: React.CSSProperties }> = ({ f, a, t, c1 = OR, c2 = AMB, glow = glowO, box = panel }) => (
   <AbsoluteFill>
     <Row top={130} gap={18} style={{ alignItems: "center" }}>
       <Pop f={f} at={t.comment} style={sans(68)}>Comment</Pop>
-      <Pop f={f} at={t.motion} style={heavy(108, OR, 82)} glow={glowO}>“MOTION”</Pop>
+      <Pop f={f} at={t.motion} style={heavy(108, c1, 82)} glow={glow}>“MOTION”</Pop>
     </Row>
     <Row top={300} gap={18} style={{ alignItems: "center" }}>
       <Pop f={f} at={t.the} style={sans(64)}>the first</Pop>
@@ -71,11 +71,11 @@ export const CommentOutro: React.FC<{ f: number; a: number; t: { comment: number
       <Pop f={f} at={t.get} style={sans(64)}>get a</Pop>
     </Row>
     <Row top={430} gap={18} style={{ alignItems: "center" }}>
-      <Pop f={f} at={t.discount} style={heavy(100, AMB, 85)}>DISCOUNT</Pop>
+      <Pop f={f} at={t.discount} style={heavy(100, c2, 85)}>DISCOUNT</Pop>
       <Pop f={f} at={t.dms - 6} style={sans(60)}>in their DMs!</Pop>
     </Row>
-    <div style={{ position: "absolute", left: 90, right: 90, top: 620, padding: "26px 30px", ...panel, opacity: prog(f, a, a + 10), transform: `translateY(${(1 - prog(f, a, a + 16, eExpo)) * 200}px)` }}>
-      <div style={{ display: "flex", justifyContent: "space-between", ...caps(22, AMB), letterSpacing: "0.2em", marginBottom: 10 }}>
+    <div style={{ position: "absolute", left: 90, right: 90, top: 620, padding: "26px 30px", ...box, opacity: prog(f, a, a + 10), transform: `translateY(${(1 - prog(f, a, a + 16, eExpo)) * 200}px)` }}>
+      <div style={{ display: "flex", justifyContent: "space-between", ...caps(22, c2), letterSpacing: "0.2em", marginBottom: 10 }}>
         <span>comments</span>
         <span>{Math.min(5, Math.max(0, Math.floor((f - t.motion) / 4) + 1))} / 5</span>
       </div>
@@ -85,20 +85,20 @@ export const CommentOutro: React.FC<{ f: number; a: number; t: { comment: number
         const dm = f >= t.discount + i * 4;
         return (
           <div key={n} style={{ display: "flex", alignItems: "center", gap: 18, padding: "12px 0", borderTop: i ? "1px solid rgba(255,255,255,0.07)" : undefined, opacity: f >= at ? Math.min(1, q * 1.5) : 0.18 }}>
-            <span style={{ ...heavy(38, AMB, 90), width: 40 }}>{i + 1}</span>
-            <div style={{ width: 52, height: 52, borderRadius: "50%", background: f >= at ? `linear-gradient(135deg, ${AV[i]}, #3b0764)` : "rgba(255,255,255,0.08)" }} />
+            <span style={{ ...heavy(38, c2, 90), width: 40 }}>{i + 1}</span>
+            <div style={{ width: 52, height: 52, borderRadius: "50%", background: f >= at ? `linear-gradient(135deg, ${c1 === OR ? AV[i] : c1}, #3b0764)` : "rgba(255,255,255,0.08)" }} />
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: SANS, fontWeight: 700, fontSize: 24, color: "rgba(255,255,255,0.6)" }}>{f >= at ? n : "your spot"}</div>
               <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 34, color: "#fff" }}>{f >= at ? "MOTION" : "…"}</div>
             </div>
-            {dm ? <span style={{ padding: "8px 16px", borderRadius: 999, background: OR, ...caps(17, "#fff"), letterSpacing: "0.1em", transform: `scale(${prog(f, t.discount + i * 4, t.discount + i * 4 + 8, eBack)})` }}>🎁 dm sent</span> : null}
+            {dm ? <span style={{ padding: "8px 16px", borderRadius: 999, background: c1, ...caps(17, "#fff"), letterSpacing: "0.1em", transform: `scale(${prog(f, t.discount + i * 4, t.discount + i * 4 + 8, eBack)})` }}>🎁 dm sent</span> : null}
           </div>
         );
       })}
     </div>
     <div style={{ position: "absolute", left: 0, right: 0, top: 1460, display: "flex", flexDirection: "column", alignItems: "center", gap: 16, opacity: prog(f, t.end, t.end + 10) }}>
       <KLogo f={f} at={t.end} size={100} />
-      <div style={{ ...caps(26, AMB), letterSpacing: "0.25em" }}>kinetik-app.com</div>
+      <div style={{ ...caps(26, c2), letterSpacing: "0.25em" }}>kinetik-app.com</div>
     </div>
   </AbsoluteFill>
 );

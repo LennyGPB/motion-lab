@@ -79,7 +79,8 @@
     "render:kinetik-resto2": "remotion render remotion/index.ts KinetikResto2 out/kinetik-resto2.mp4 --codec=h264 --audio-codec=aac",
     "render:signspath-promo": "remotion render remotion/index.ts SignsPathPromo out/signspath-promo.mp4 --codec=h264 --audio-codec=aac",
     "render:signspath-futureself": "remotion render remotion/index.ts SignsPathFutureSelf out/signspath-futureself.mp4 --codec=h264 --audio-codec=aac",
-    "render:signspath-rituals": "remotion render remotion/index.ts SignsPathRituals out/signspath-rituals.mp4 --codec=h264 --audio-codec=aac"
+    "render:signspath-rituals": "remotion render remotion/index.ts SignsPathRituals out/signspath-rituals.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-allin3": "remotion render remotion/index.ts KinetikAllIn3 out/kinetik-allin3.mp4 --codec=h264 --audio-codec=aac"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",
