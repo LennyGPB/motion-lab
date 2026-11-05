@@ -426,3 +426,9 @@ Composition `KinetikAllIn3` (21,8 s), nouveau fond **relief de lignes** (`remoti
 - Mur 3D incliné de templates qui défile (« 500+ templates »). Un template vient au premier plan, les pastilles de marque l'atteignent et il se recolore sur « SNAP! ».
 - « HANDLES THE REST » avec la vraie capture de l'app en 3D et une barre de rendu, puis « kinetik-app.com » en lettres extrudées au-dessus du site, et la fin « Comment MOTION » en bleu (`CommentOutro` accepte maintenant d'autres couleurs).
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-allin3`.
+
+### Pubs Signs « métal liquide » (vertical, anglais, voix Zara)
+
+Nouveau fond pour Signs : métal liquide violet animé (`remotion/signspath21/Liquid.tsx`). C'est un champ de hauteur déformé, calculé en basse résolution puis agrandi, avec reflets spéculaires et lignes brillantes ; il accélère et zoome à chaque coupe. Les transitions 3D sont communes (`remotion/signspath21/stage.tsx`, `Stage3D`) : rotation en cube, bascule, plongée, balancier.
+- `SignsPathScripting` (28,6 s) — « Scripting is the most underrated manifestation technique » : carnet 3D qui s'écrit tout seul, téléphone qui pivote, les 3 règles (passé → présent, « I will » barré → « I am »), le script « Today, I feel calm, because I finally… » tapé, page blanche qui se retourne en prompt personnalisé, preuves en orbite 3D autour de l'orbe, puis les stores. Rendu : `npm run render:signspath-scripting`.
+- `SignsPathSentence` (29,1 s) — « One sentence in your head is blocking your manifestation » : rayon de lumière bloqué par la phrase, loupe qui trouve la phrase puis réécriture, les 3 phrases qui arrivent du fond en 3D, la phrase qui tourne en boucle sur un cylindre 3D, carte qui se retourne de l'ancienne croyance vers « I'm capable and I'm learning » avec une jauge « believable », écran de répétition au lever du soleil, puis les stores. Rendu : `npm run render:signspath-sentence`.
