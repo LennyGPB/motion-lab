@@ -52,6 +52,7 @@ import { OnePlace } from "./kinetik17/OnePlace";
 import { DURATION_FRAMES as ONEPLACE_FRAMES } from "./kinetik17/timing";
 import { Studio as KinetikStudioAd } from "./kinetik18/Studio";
 import { DURATION_FRAMES as STUDIO_FRAMES } from "./kinetik18/timing";
+import { MASCOT_FRAMES, MascotTest } from "./mascot/MascotTest";
 import { DURATION_FRAMES as LAUNCHK_FRAMES } from "./kinetik13/timing";
 import { DURATION_FRAMES as DEV_FRAMES } from "./kinetik12/timing";
 import { DURATION_FRAMES as PASTE_FRAMES } from "./kinetik11/timing";
@@ -157,6 +158,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="KinetikAllIn3" component={AllIn3} durationInFrames={ALLIN3_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikOnePlace" component={OnePlace} durationInFrames={ONEPLACE_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikStudio" component={KinetikStudioAd} durationInFrames={STUDIO_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="MascotTest" component={MascotTest} durationInFrames={MASCOT_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEyesClosed" component={EyesClosed} durationInFrames={EYES_FRAMES} fps={30} width={1080} height={1920} />
