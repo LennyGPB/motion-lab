@@ -14,13 +14,13 @@ loadViewzFonts();
 loadFonts();
 
 /* ---------- palette « pop » reprise de la mascotte ---------- */
-const YEL = "#ffc93c";
-const PINK = "#ff4f9a";
-const BLUE = "#1fa3e8";
-const ORA = "#ff7a2f";
-const INK = "#111018";
-type Theme = { a: string; b: string; dots: string; shapes: string[] };
-const THEMES: Theme[] = [
+export const YEL = "#ffc93c";
+export const PINK = "#ff4f9a";
+export const BLUE = "#1fa3e8";
+export const ORA = "#ff7a2f";
+export const INK = "#111018";
+export type Theme = { a: string; b: string; dots: string; shapes: string[] };
+export const THEMES: Theme[] = [
   { a: "#1fa3e8", b: "#1793d6", dots: "rgba(255,255,255,0.14)", shapes: [YEL, PINK, "#fff"] },
   { a: "#ff4f9a", b: "#f43f8c", dots: "rgba(255,255,255,0.16)", shapes: [YEL, BLUE, "#fff"] },
   { a: "#ffc93c", b: "#ffbb1f", dots: "rgba(255,255,255,0.22)", shapes: [PINK, BLUE, ORA] },
@@ -29,7 +29,7 @@ const THEMES: Theme[] = [
 ];
 
 /** Texte « autocollant » : lettres épaisses, contour noir, ombre décalée. */
-const stk = (size: number, color = "#fff", stretch = 80): React.CSSProperties => ({
+export const stk = (size: number, color = "#fff", stretch = 80): React.CSSProperties => ({
   fontFamily: FONT,
   fontStyle: "italic",
   fontWeight: 900,
@@ -46,11 +46,11 @@ const stk = (size: number, color = "#fff", stretch = 80): React.CSSProperties =>
 });
 
 /** Mot qui « claque » : arrive en grand avec rotation, rebondit. */
-const Slam: React.FC<{ f: number; at: number; style: React.CSSProperties; children: React.ReactNode; rot?: number }> = ({ f, at, style, children, rot = -4 }) => {
+export const Slam: React.FC<{ f: number; at: number; style: React.CSSProperties; children: React.ReactNode; rot?: number }> = ({ f, at, style, children, rot = -4 }) => {
   const q = prog(f, at - 1, at + 9, eBack);
   return <span style={{ ...style, display: "inline-block", opacity: f < at - 1 ? 0 : 1, transform: `scale(${lerp(2.2, 1, Math.min(1, q)) * (q > 1 ? q : 1)}) rotate(${lerp(rot * 4, rot, Math.min(1, q))}deg)` }}>{children}</span>;
 };
-const Line: React.FC<{ top: number; children: React.ReactNode; gap?: number }> = ({ top, children, gap = 22 }) => (
+export const Line: React.FC<{ top: number; children: React.ReactNode; gap?: number }> = ({ top, children, gap = 22 }) => (
   <div style={{ position: "absolute", top, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "center", gap }}>{children}</div>
 );
 
@@ -67,7 +67,7 @@ const Shape: React.FC<{ k: number; c: string; s: number }> = ({ k, c, s }) =>
     <svg width={s} height={s} viewBox="-50 -50 100 100"><path d="M-10,-40 H10 V-10 H40 V10 H10 V40 H-10 V10 H-40 V-10 H-10 Z" fill={c} stroke={INK} strokeWidth={6} strokeLinejoin="round" /></svg>
   );
 
-const PopLayer: React.FC<{ f: number; th: Theme; speed: number }> = ({ f, th, speed }) => (
+export const PopLayer: React.FC<{ f: number; th: Theme; speed: number }> = ({ f, th, speed }) => (
   <AbsoluteFill style={{ background: th.a }}>
     <AbsoluteFill style={{ background: `repeating-conic-gradient(from ${f * 0.35 * speed}deg at 50% 42%, ${th.a} 0deg 9deg, ${th.b} 9deg 18deg)` }} />
     <AbsoluteFill style={{ backgroundImage: `radial-gradient(${th.dots} 30%, transparent 32%)`, backgroundSize: "34px 34px", backgroundPosition: `${f * 0.6}px ${f * 0.4}px`, WebkitMaskImage: "radial-gradient(circle at 50% 42%, transparent 20%, #000 75%)", maskImage: "radial-gradient(circle at 50% 42%, transparent 20%, #000 75%)" }} />
@@ -80,18 +80,18 @@ const PopLayer: React.FC<{ f: number; th: Theme; speed: number }> = ({ f, th, sp
 );
 
 /** Fond pop : rayons qui tournent, trame de points, formes ; nouvelle couleur en rond qui grandit à chaque coupe. */
-const PopBg: React.FC<{ f: number; cuts: number[] }> = ({ f, cuts }) => {
+export const PopBg: React.FC<{ f: number; cuts: number[]; themes?: Theme[] }> = ({ f, cuts, themes = THEMES }) => {
   let i = 0;
   while (i < cuts.length && f >= cuts[i]) i++;
   const speed = 1 + cuts.reduce((s, c) => s + 4 * Math.exp(-Math.abs(f - c) / 6), 0);
-  const prev = i > 0 ? THEMES[i - 1] : THEMES[0];
+  const prev = i > 0 ? themes[i - 1] : themes[0];
   const wipe = i > 0 ? prog(f, cuts[i - 1], cuts[i - 1] + 14, eInOut) : 1;
   return (
     <AbsoluteFill>
       <PopLayer f={f} th={prev} speed={speed} />
       {wipe < 1 || i > 0 ? (
         <AbsoluteFill style={{ clipPath: `circle(${wipe * 120}% at 50% 42%)` }}>
-          <PopLayer f={f} th={THEMES[i]} speed={speed} />
+          <PopLayer f={f} th={themes[i]} speed={speed} />
         </AbsoluteFill>
       ) : null}
       {/* anneau d'onde sur la coupe */}
