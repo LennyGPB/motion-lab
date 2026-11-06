@@ -55,6 +55,8 @@ import { DURATION_FRAMES as STUDIO_FRAMES } from "./kinetik18/timing";
 import { MASCOT_FRAMES, MascotTest } from "./mascot/MascotTest";
 import { Link as KinetikLinkAd } from "./kinetik19/Link";
 import { DURATION_FRAMES as LINK_FRAMES } from "./kinetik19/timing";
+import { Never } from "./kinetik20/Never";
+import { DURATION_FRAMES as NEVER_FRAMES } from "./kinetik20/timing";
 import { DURATION_FRAMES as LAUNCHK_FRAMES } from "./kinetik13/timing";
 import { DURATION_FRAMES as DEV_FRAMES } from "./kinetik12/timing";
 import { DURATION_FRAMES as PASTE_FRAMES } from "./kinetik11/timing";
@@ -162,6 +164,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="KinetikStudio" component={KinetikStudioAd} durationInFrames={STUDIO_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="MascotTest" component={MascotTest} durationInFrames={MASCOT_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="KinetikLink" component={KinetikLinkAd} durationInFrames={LINK_FRAMES} fps={30} width={1080} height={1920} />
+      <Composition id="KinetikNever" component={Never} durationInFrames={NEVER_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPath21Days" component={Days21} durationInFrames={DAYS21_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathTuesday" component={Tuesday} durationInFrames={TUESDAY_FRAMES} fps={30} width={1080} height={1920} />
       <Composition id="SignsPathEyesClosed" component={EyesClosed} durationInFrames={EYES_FRAMES} fps={30} width={1080} height={1920} />

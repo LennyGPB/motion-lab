@@ -85,7 +85,8 @@
     "render:signspath-sentence": "remotion render remotion/index.ts SignsPathSentence out/signspath-sentence.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-oneplace": "remotion render remotion/index.ts KinetikOnePlace out/kinetik-oneplace.mp4 --codec=h264 --audio-codec=aac",
     "render:kinetik-studio": "remotion render remotion/index.ts KinetikStudio out/kinetik-studio.mp4 --codec=h264 --audio-codec=aac",
-    "render:kinetik-link": "remotion render remotion/index.ts KinetikLink out/kinetik-link.mp4 --codec=h264 --audio-codec=aac"
+    "render:kinetik-link": "remotion render remotion/index.ts KinetikLink out/kinetik-link.mp4 --codec=h264 --audio-codec=aac",
+    "render:kinetik-never": "remotion render remotion/index.ts KinetikNever out/kinetik-never.mp4 --codec=h264 --audio-codec=aac"
   },
   "dependencies": {
     "@remotion/cli": "4.0.539",

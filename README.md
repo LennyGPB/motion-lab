@@ -448,3 +448,9 @@ Composition `KinetikStudio` (21,9 s), habillage verre cannelé orange/violet. «
 Composition `KinetikLink` (19 s). Nouveau fond **nuages néon** (`remotion/kinetik19/Clouds.tsx`) : ciel étoilé, couches de nuages violets bombés en parallaxe, bord lumineux lavande/cyan et flou de profondeur au premier plan. La mascotte Kinetik (`remotion/mascot/`) parle pendant toute la pub : sa bouche suit le volume de la voix (`remotion/kinetik19/env.ts`). Elle se déplace d'une scène à l'autre en sautant (grande au centre, en bas à gauche, en haut à droite, en bas à droite, avec une rotation 3D sur « export ») grâce à une piste d'images clés (`TRACK`).
 - « ONE LINK. » avec un maillon 3D, puis l'URL collée (⌘V) et le site scanné : LOGO, COLORS et COPY en sortent. La vidéo arrive dans un téléphone (« READY in 2.2s »), puis « TWEAK, EXPORT, POST. » avec réglages, export et likes, l'URL tapée, et la fin « Comment MOTION » en violet.
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-link`.
+
+### Pub Kinetik « I've never edited a video » avec la mascotte (vertical, anglais, voix Derek)
+
+Composition `KinetikNever` (16,4 s). Nouveau fond **pop** coloré (`remotion/kinetik20/Never.tsx`) aux couleurs de la mascotte : rayons qui tournent, trame de points, étoiles, anneaux et gribouillis qui flottent. Il change de couleur à chaque scène (bleu → rose → jaune → orange → violet) en rond qui grandit, et le texte est en style autocollant (contour noir, ombre décalée). La mascotte parle à la première personne et se déplace avec `trackPlace` (`remotion/mascot/`).
+- « I'VE NEVER EDITED A VIDEO IN MY LIFE. » avec une timeline barrée, puis « THIS ONE » : la vidéo elle-même dans un téléphone, avec la mascotte en miniature, « IN 2.7s » et « with Kinetik ». Ensuite « SO CAN YOU! » sur un éclat, l'URL tapée dans un autocollant, et la fin « Comment MOTION ».
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-never`.

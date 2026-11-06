@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Html5Audio, Img, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { loadViewzFonts } from "../viewz/theme";
-import { eInOut, prog } from "../viewz/util";
+import { eBack as eBackM, eInOut, prog } from "../viewz/util";
 import { CYAN, GridFloor } from "../kinetik2/parts";
 import { KLogo, Pop, Row, heavy } from "../kinetik3/Kinetik3";
 import { T } from "../kinetik16/timing";
@@ -13,6 +13,21 @@ export const MASCOT_FRAMES = 240;
 const IW = 736;
 const IH = 815;
 const S = 1000 / IW; // échelle d'affichage
+
+/** Piste d'images clés pour déplacer la mascotte (sauts, rebonds, rotation 3D). */
+export type MascotKey = Place & { at: number; dur?: number; hop?: number };
+export const trackPlace = (track: MascotKey[], f: number): Place => {
+  let cur: MascotKey = track[0];
+  for (let i = 1; i < track.length; i++) {
+    const k = track[i];
+    if (f < k.at) break;
+    const q = prog(f, k.at, k.at + (k.dur ?? 10), eBackM);
+    const qy = prog(f, k.at, k.at + (k.dur ?? 10), eInOut);
+    const hop = (k.hop ?? 0) * Math.sin(Math.PI * Math.min(1, qy));
+    cur = { at: k.at, x: cur.x + (k.x - cur.x) * q, y: cur.y + (k.y - cur.y) * q - hop, s: cur.s + (k.s - cur.s) * q, rot: (cur.rot ?? 0) + ((k.rot ?? 0) - (cur.rot ?? 0)) * q, ry: (cur.ry ?? 0) + ((k.ry ?? 0) - (cur.ry ?? 0)) * qy };
+  }
+  return { ...cur, y: cur.y + 6 * Math.sin(f / 9) };
+};
 
 /** Mascotte qui « parle » : tête qui bouge, mâchoire pilotée par le volume, yeux et filtres lumineux. */
 export type Place = { x: number; y: number; s: number; rot?: number; ry?: number; flip?: boolean };
