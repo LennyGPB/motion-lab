@@ -15,8 +15,9 @@ const IH = 815;
 const S = 1000 / IW; // échelle d'affichage
 
 /** Mascotte qui « parle » : tête qui bouge, mâchoire pilotée par le volume, yeux et filtres lumineux. */
-export const Mascot: React.FC<{ f: number; voiceFrom: number }> = ({ f, voiceFrom }) => {
-  const env = (k: number) => ENV[Math.max(0, Math.min(ENV.length - 1, k - voiceFrom))] ?? 0;
+export type Place = { x: number; y: number; s: number; rot?: number; ry?: number; flip?: boolean };
+export const Mascot: React.FC<{ f: number; voiceFrom: number; env?: number[]; place?: Place; fade?: boolean }> = ({ f, voiceFrom, env: E = ENV, place, fade }) => {
+  const env = (k: number) => E[Math.max(0, Math.min(E.length - 1, k - voiceFrom))] ?? 0;
   const talk = f >= voiceFrom ? env(f) : 0;
   const smooth = f >= voiceFrom ? (env(f) + env(f - 1) + env(f - 2) + env(f - 3)) / 4 : 0;
   const headRot = 2 * Math.sin(f / 21) + (smooth - 0.35) * 3.5;
@@ -28,7 +29,21 @@ export const Mascot: React.FC<{ f: number; voiceFrom: number }> = ({ f, voiceFro
   const eye = (0.55 + 0.45 * smooth) * blink;
   const layer: React.CSSProperties = { position: "absolute", left: 0, top: 0, width: IW, height: IH };
   return (
-    <div style={{ position: "absolute", left: 540 - (IW * S) / 2, top: 1920 - IH * S, width: IW, height: IH, transform: `scale(${S})`, transformOrigin: "0 0" }}>
+    <div
+      style={{
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: IW,
+        height: IH,
+        transformOrigin: "50% 100%",
+        transform: place
+          ? `translate(${place.x - IW / 2}px, ${place.y - IH}px) perspective(1400px) rotateY(${place.ry ?? 0}deg) rotate(${place.rot ?? 0}deg) scale(${S * place.s}) scaleX(${place.flip ? -1 : 1})`
+          : `translate(${540 - IW / 2}px, ${1920 - IH}px) scale(${S})`,
+        WebkitMaskImage: fade ? "linear-gradient(180deg, #000 72%, transparent 98%)" : undefined,
+        maskImage: fade ? "linear-gradient(180deg, #000 72%, transparent 98%)" : undefined,
+      }}
+    >
       {/* corps qui respire */}
       <Img src={staticFile("mascot/body.png")} style={{ ...layer, transformOrigin: "50% 100%", transform: `scaleY(${breathe})` }} />
       {/* tête + mâchoire, pivot au cou */}

@@ -17,12 +17,12 @@ const glowB = "rgba(70,70,255,0.75)";
 const panelB: React.CSSProperties = { borderRadius: 36, background: "rgba(5,5,18,0.86)", border: "1.5px solid rgba(150,150,255,0.4)", boxShadow: "0 30px 80px rgba(0,0,0,0.6), 0 0 40px rgba(60,60,255,0.35)" };
 
 /* ---------- transitions 3D ---------- */
-type Kind = "cube" | "dive" | "rise" | "none";
+export type Kind = "cube" | "dive" | "rise" | "none";
 const enterT = (k: Kind, q: number) =>
   k === "cube" ? `rotateY(${(1 - q) * 95}deg)` : k === "dive" ? `translateZ(${(1 - q) * -2200}px)` : k === "rise" ? `translateY(${(1 - q) * 700}px) rotateX(${(1 - q) * 75}deg)` : "";
 const exitT = (k: Kind, q: number) =>
   k === "cube" ? `rotateY(${-q * 95}deg)` : k === "dive" ? `translateZ(${q * 1300}px)` : k === "rise" ? `translateY(${-q * 700}px) rotateX(${-q * 75}deg)` : "";
-const Stage: React.FC<{ f: number; a: number; b: number; enter: Kind; exit: Kind; children: React.ReactNode }> = ({ f, a, b, enter, exit, children }) => {
+export const Stage: React.FC<{ f: number; a: number; b: number; enter: Kind; exit: Kind; children: React.ReactNode }> = ({ f, a, b, enter, exit, children }) => {
   if (f < a - 6 || f > b + 4) return null;
   const qi = enter === "none" ? 1 : prog(f, a - 6, a + 9, eExpo);
   const qo = exit === "none" ? 0 : prog(f, b - 8, b + 3, eInOut);

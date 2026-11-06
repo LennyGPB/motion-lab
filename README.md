@@ -442,3 +442,9 @@ Composition `KinetikOnePlace` (20,3 s), style Kinetik d'origine (grille néon cy
 
 Composition `KinetikStudio` (21,9 s), habillage verre cannelé orange/violet. « no TIME / no BUDGET / no SKILLS? » sur trois cartes 3D barrées, puis « FULL CREATIVE STUDIO » : deux portes 3D qui s'ouvrent sur l'app, et une barre « ready in seconds ». Ensuite les 4 formats (vidéo, logo animé, posts, visuel) qui arrivent du fond, puis pivotent et prennent les couleurs de la marque (« ✓ automatically »). L'URL est tapée au-dessus du site, et la fin « Comment MOTION ».
 - Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-studio`.
+
+### Pub Kinetik « One link » avec la mascotte (vertical, anglais, voix Derek)
+
+Composition `KinetikLink` (19 s). Nouveau fond **nuages néon** (`remotion/kinetik19/Clouds.tsx`) : ciel étoilé, couches de nuages violets bombés en parallaxe, bord lumineux lavande/cyan et flou de profondeur au premier plan. La mascotte Kinetik (`remotion/mascot/`) parle pendant toute la pub : sa bouche suit le volume de la voix (`remotion/kinetik19/env.ts`). Elle se déplace d'une scène à l'autre en sautant (grande au centre, en bas à gauche, en haut à droite, en bas à droite, avec une rotation 3D sur « export ») grâce à une piste d'images clés (`TRACK`).
+- « ONE LINK. » avec un maillon 3D, puis l'URL collée (⌘V) et le site scanné : LOGO, COLORS et COPY en sortent. La vidéo arrive dans un téléphone (« READY in 2.2s »), puis « TWEAK, EXPORT, POST. » avec réglages, export et likes, l'URL tapée, et la fin « Comment MOTION » en violet.
+- Musique : `npm run sfx:kinetik-promos`. Rendu : `npm run render:kinetik-link`.
